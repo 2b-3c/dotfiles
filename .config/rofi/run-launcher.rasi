@@ -1,0 +1,81 @@
+/* Run Launcher — run — Pink Lavender */
+
+configuration {
+    modi:            "run";
+    show-icons:      false;
+    disable-history: false;
+    hide-scrollbar:  true;
+    font:            "JetBrainsMono Nerd Font Bold 10";
+}
+
+@theme "~/.config/rofi/themes/theme.rasi"
+
+window {
+    width:            280px;
+    background-color: @bg;
+    border:           2px solid;
+    border-color:     @border;
+    border-radius:    0px;
+}
+
+mainbox {
+    background-color: transparent;
+    padding:          8px;
+    spacing:          6px;
+}
+
+inputbar {
+    background-color: @bg-alt;
+    border-radius:    0px;
+    padding:          8px 12px;
+    spacing:          8px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    text-color: @accent;
+    font:       "JetBrainsMono Nerd Font Bold 10";
+}
+
+entry {
+    text-color:        @fg;
+    placeholder:       "Run...";
+    placeholder-color: @fg-alt;
+}
+
+listview {
+    background-color: transparent;
+    scrollbar:        false;
+    spacing:          2px;
+    lines:            12;
+}
+
+element {
+    background-color: transparent;
+    border-radius:    0px;
+    padding:          7px 10px;
+    spacing:          8px;
+    orientation:      horizontal;
+}
+
+element selected {
+    background-color: @accent;
+    text-color:       @bg;
+}
+
+element-icon {
+    size:             0px;
+}
+
+element-text {
+    text-color: inherit;
+}
+
+element normal urgent {
+    text-color: @urgent;
+}
+
+element selected urgent {
+    background-color: @urgent;
+    text-color:       @bg;
+}

@@ -1,0 +1,39 @@
+/* 
+  Black Hole Theme for Waybar
+*/
+
+@define-color main-fg         #e8d5d5;
+@define-color main-bg         #0d0a19;
+@define-color main-br         #995d69;
+
+@define-color active-bg       #995d69;
+@define-color active-fg       #0d0a19;
+
+@define-color hover-bg        #17132a;
+@define-color hover-fg        rgba(232, 213, 213, 0.75);
+
+@define-color white           #ffffff;
+@define-color black           #000000;
+
+@define-color module-fg       #bb8887;
+@define-color workspaces      #17132a;
+
+@define-color cpuinfo         #17132a;
+@define-color memory          #0d0a19;
+@define-color cpu             #261733;
+@define-color distro-fg       #0d0a19;
+@define-color distro-bg       #995d69;
+@define-color time            #261733;
+@define-color date            #0d0a19;
+@define-color tray            #17132a;
+
+@define-color pulseaudio      #17132a;
+@define-color backlight       #0d0a19;
+@define-color battery         #261733;
+@define-color power           #995d69;
+
+@define-color good            #bb8887;
+@define-color warning         #694c67;
+@define-color critical        #583264;
+@define-color full            #4a3154;
+@define-color charging        #e8d5d5;

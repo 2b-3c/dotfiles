@@ -1,0 +1,22 @@
+/* Cyberpunk Theme for Rofi */
+
+* {
+    bg:          #020208;
+    bg-alt:      #111829;
+    fg:          #e0e8ff;
+    fg-alt:      #30132b;
+    accent:      #f10354;
+    accent2:     #9d0d4e;
+    border:      #f10354;
+    urgent:      #9d0d4e;
+
+    main-bg:     #020208;
+    main-fg:     #e0e8ff;
+    main-br:     #f10354;
+    input-bg:    #111829;
+    select-bg:   #f10354;
+    select-fg:   #020208;
+
+    background-color: transparent;
+    text-color:       @fg;
+}

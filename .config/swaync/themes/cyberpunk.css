@@ -1,0 +1,9 @@
+/* Cyberpunk for SwayNC */
+@define-color main-bg    #020208;
+@define-color main-fg    #e0e8ff;
+@define-color accent     #f10354;
+@define-color accent-bg  #111829;
+@define-color hover      #111829;
+@define-color active     #9d0d4e;
+@define-color border     #f10354;
+@define-color inactive-fg #30132b;

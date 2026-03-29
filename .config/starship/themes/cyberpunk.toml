@@ -1,0 +1,11 @@
+# cyberpunk accent color
+[character]
+error_symbol = "[✗](bold #9d0d4e)"
+success_symbol = "[❯](bold #f10354)"
+[directory]
+style = "bold #f10354"
+repo_root_style = "bold #147ea1"
+[git_branch]
+style = "italic #147ea1"
+[git_status]
+style = "#f10354"

@@ -1,0 +1,39 @@
+/* 
+  Cyberpunk Theme for Waybar
+*/
+
+@define-color main-fg         #e0e8ff;
+@define-color main-bg         #020208;
+@define-color main-br         #f10354;
+
+@define-color active-bg       #f10354;
+@define-color active-fg       #020208;
+
+@define-color hover-bg        #111829;
+@define-color hover-fg        rgba(224, 232, 255, 0.75);
+
+@define-color white           #ffffff;
+@define-color black           #000000;
+
+@define-color module-fg       #147ea1;
+@define-color workspaces      #111829;
+
+@define-color cpuinfo         #111829;
+@define-color memory          #0a0f1a;
+@define-color cpu             #172744;
+@define-color distro-fg       #020208;
+@define-color distro-bg       #f10354;
+@define-color time            #172744;
+@define-color date            #0a0f1a;
+@define-color tray            #111829;
+
+@define-color pulseaudio      #111829;
+@define-color backlight       #0a0f1a;
+@define-color battery         #172744;
+@define-color power           #f10354;
+
+@define-color good            #147ea1;
+@define-color warning         #f10354;
+@define-color critical        #9d0d4e;
+@define-color full            #147ea1;
+@define-color charging        #e0e8ff;

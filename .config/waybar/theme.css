@@ -1,0 +1,39 @@
+/*
+  Gruvbox Light Knight Theme for Waybar
+*/
+
+@define-color main-fg         #333231;
+@define-color main-bg         #f1e4bb;
+@define-color main-br         #6f6959;
+
+@define-color active-bg       #514f49;
+@define-color active-fg       #f1e4bb;
+
+@define-color hover-bg        #ded1ac;
+@define-color hover-fg        rgba(51, 50, 49, 0.75);
+
+@define-color white           #f1e4bb;
+@define-color black           #333231;
+
+@define-color module-fg       #514f49;
+@define-color workspaces      #ded1ac;
+
+@define-color cpuinfo         #ded1ac;
+@define-color memory          #e8d9a8;
+@define-color cpu             #d4c894;
+@define-color distro-fg       #f1e4bb;
+@define-color distro-bg       #514f49;
+@define-color time            #d4c894;
+@define-color date            #e8d9a8;
+@define-color tray            #ded1ac;
+
+@define-color pulseaudio      #ded1ac;
+@define-color backlight       #e8d9a8;
+@define-color battery         #d4c894;
+@define-color power           #514f49;
+
+@define-color good            #6f6959;
+@define-color warning         #847b66;
+@define-color critical        #333231;
+@define-color full            #6f6959;
+@define-color charging        #333231;

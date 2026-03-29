@@ -1,0 +1,9 @@
+/* Black Hole for SwayNC */
+@define-color main-bg    #0d0a19;
+@define-color main-fg    #e8d5d5;
+@define-color accent     #995d69;
+@define-color accent-bg  #17132a;
+@define-color hover      #17132a;
+@define-color active     #583264;
+@define-color border     #995d69;
+@define-color inactive-fg #2b233a;

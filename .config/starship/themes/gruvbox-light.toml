@@ -1,0 +1,10 @@
+[character]
+error_symbol = "[✗](bold #847b66)"
+success_symbol = "[❯](bold #514f49)"
+[directory]
+style = "bold #6f6959"
+repo_root_style = "bold #514f49"
+[git_branch]
+style = "italic #847b66"
+[git_status]
+style = "#6f6959"

@@ -1,0 +1,22 @@
+/* Black Hole Theme for Rofi */
+
+* {
+    bg:          #0d0a19;
+    bg-alt:      #17132a;
+    fg:          #e8d5d5;
+    fg-alt:      #2b233a;
+    accent:      #995d69;
+    accent2:     #583264;
+    border:      #995d69;
+    urgent:      #583264;
+
+    main-bg:     #0d0a19;
+    main-fg:     #e8d5d5;
+    main-br:     #995d69;
+    input-bg:    #17132a;
+    select-bg:   #995d69;
+    select-fg:   #0d0a19;
+
+    background-color: transparent;
+    text-color:       @fg;
+}
