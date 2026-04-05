@@ -1,0 +1,22 @@
+/* Miasma Theme for Rofi */
+
+* {
+    bg:          #222222;
+    bg-alt:      #2c2c2c;
+    fg:          #c2c2b0;
+    fg-alt:      #222222;
+    accent:      #78824b;
+    accent2:     #685742;
+    border:      #78824b;
+    urgent:      #685742;
+
+    main-bg:     #222222;
+    main-fg:     #c2c2b0;
+    main-br:     #78824b;
+    input-bg:    #2c2c2c;
+    select-bg:   #78824b;
+    select-fg:   #222222;
+
+    background-color: transparent;
+    text-color:       @fg;
+}

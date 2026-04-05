@@ -1,0 +1,22 @@
+/* Vantablack Theme for Rofi */
+
+* {
+    bg:          #0d0d0d;
+    bg-alt:      #1c1c1c;
+    fg:          #ffffff;
+    fg-alt:      #0d0d0d;
+    accent:      #8d8d8d;
+    accent2:     #a4a4a4;
+    border:      #8d8d8d;
+    urgent:      #a4a4a4;
+
+    main-bg:     #0d0d0d;
+    main-fg:     #ffffff;
+    main-br:     #8d8d8d;
+    input-bg:    #141414;
+    select-bg:   #8d8d8d;
+    select-fg:   #0d0d0d;
+
+    background-color: transparent;
+    text-color:       @fg;
+}

@@ -1,0 +1,41 @@
+/* Tokyo Night — GTK Colors
+ * bg: #1a1b26  fg: #a9b1d6  accent: #7aa2f7
+ */
+
+@define-color accent_color          #7aa2f7;
+@define-color accent_bg_color       #7aa2f7;
+@define-color accent_fg_color       #1a1b26;
+
+@define-color window_bg_color       #1a1b26;
+@define-color window_fg_color       #a9b1d6;
+
+@define-color view_bg_color         #1a1b26;
+@define-color view_fg_color         #a9b1d6;
+
+@define-color headerbar_bg_color    #1a1b26;
+@define-color headerbar_fg_color    #a9b1d6;
+@define-color headerbar_border_color #32344a;
+@define-color headerbar_backdrop_color #24283b;
+@define-color headerbar_shade_color rgba(26, 27, 38, 0.08);
+
+@define-color card_bg_color         #1f2335;
+@define-color card_fg_color         #a9b1d6;
+@define-color card_shade_color      rgba(26, 27, 38, 0.08);
+
+@define-color dialog_bg_color       #1a1b26;
+@define-color dialog_fg_color       #a9b1d6;
+
+@define-color popover_bg_color      #24283b;
+@define-color popover_fg_color      #a9b1d6;
+@define-color popover_shade_color   rgba(26, 27, 38, 0.08);
+
+@define-color sidebar_bg_color      #1f2335;
+@define-color sidebar_fg_color      #a9b1d6;
+@define-color sidebar_backdrop_color #24283b;
+@define-color sidebar_shade_color   rgba(26, 27, 38, 0.08);
+
+@define-color thumbnail_bg_color    #1f2335;
+@define-color thumbnail_fg_color    #a9b1d6;
+
+@define-color shade_color           rgba(26, 27, 38, 0.08);
+@define-color scrollbar_outline_color rgba(26, 27, 38, 0.5);

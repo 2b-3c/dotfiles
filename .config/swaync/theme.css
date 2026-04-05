@@ -1,0 +1,9 @@
+/* Gruvbox Light Knight for SwayNC */
+@define-color main-bg    #f1e4bb;
+@define-color main-fg    #333231;
+@define-color accent     #6f6959;
+@define-color accent-bg  #ded1ac;
+@define-color hover      #ded1ac;
+@define-color active     #514f49;
+@define-color border     #6f6959;
+@define-color inactive-fg #958b73;

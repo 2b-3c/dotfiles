@@ -1,0 +1,9 @@
+/* Tokyo Night for SwayNC */
+@define-color main-bg    #1a1b26;
+@define-color main-fg    #a9b1d6;
+@define-color accent     #7aa2f7;
+@define-color accent-bg  #24283b;
+@define-color hover      #24283b;
+@define-color active     #32344a;
+@define-color border     #7aa2f7;
+@define-color inactive-fg #444b6a;

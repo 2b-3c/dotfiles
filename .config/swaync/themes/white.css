@@ -1,0 +1,9 @@
+/* White for SwayNC */
+@define-color main-bg    #ffffff;
+@define-color main-fg    #000000;
+@define-color accent     #1a1a1a;
+@define-color accent-bg  #eeeeee;
+@define-color hover      #e8e8e8;
+@define-color active     #d0d0d0;
+@define-color border     #6e6e6e;
+@define-color inactive-fg #c0c0c0;

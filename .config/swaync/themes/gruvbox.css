@@ -1,0 +1,9 @@
+/* Gruvbox for SwayNC */
+@define-color main-bg    #282828;
+@define-color main-fg    #d4be98;
+@define-color accent     #7daea3;
+@define-color accent-bg  #3c3836;
+@define-color hover      #3c3836;
+@define-color active     #504945;
+@define-color border     #7daea3;
+@define-color inactive-fg #665c54;

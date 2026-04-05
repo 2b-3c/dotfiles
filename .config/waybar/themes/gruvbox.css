@@ -1,0 +1,37 @@
+/* Gruvbox Theme for Waybar */
+
+@define-color main-fg         #d4be98;
+@define-color main-bg         #282828;
+@define-color main-br         #7daea3;
+
+@define-color active-bg       #7daea3;
+@define-color active-fg       #282828;
+
+@define-color hover-bg        #3c3836;
+@define-color hover-fg        rgba(212, 190, 152, 0.85);
+
+@define-color white           #d4be98;
+@define-color black           #282828;
+
+@define-color module-fg       #665c54;
+@define-color workspaces      #32302f;
+
+@define-color cpuinfo         #32302f;
+@define-color memory          #3c3836;
+@define-color cpu             #504945;
+@define-color distro-fg       #282828;
+@define-color distro-bg       #7daea3;
+@define-color time            #504945;
+@define-color date            #3c3836;
+@define-color tray            #32302f;
+
+@define-color pulseaudio      #32302f;
+@define-color backlight       #3c3836;
+@define-color battery         #504945;
+@define-color power           #7daea3;
+
+@define-color good            #a9b665;
+@define-color warning         #d8a657;
+@define-color critical        #ea6962;
+@define-color full            #a9b665;
+@define-color charging        #d4be98;

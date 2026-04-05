@@ -1,0 +1,22 @@
+/* Ristretto Theme for Rofi */
+
+* {
+    bg:          #2c2525;
+    bg-alt:      #3d3536;
+    fg:          #e6d9db;
+    fg-alt:      #72696a;
+    accent:      #f38d70;
+    accent2:     #fd6883;
+    border:      #f38d70;
+    urgent:      #fd6883;
+
+    main-bg:     #2c2525;
+    main-fg:     #e6d9db;
+    main-br:     #f38d70;
+    input-bg:    #3d3536;
+    select-bg:   #f38d70;
+    select-fg:   #2c2525;
+
+    background-color: transparent;
+    text-color:       @fg;
+}

@@ -1,0 +1,22 @@
+/* Osaka-Jade Theme for Rofi */
+
+* {
+    bg:          #111c18;
+    bg-alt:      #192820;
+    fg:          #C1C497;
+    fg-alt:      #111c18;
+    accent:      #509475;
+    accent2:     #FF5345;
+    border:      #509475;
+    urgent:      #FF5345;
+
+    main-bg:     #111c18;
+    main-fg:     #C1C497;
+    main-br:     #509475;
+    input-bg:    #192820;
+    select-bg:   #509475;
+    select-fg:   #111c18;
+
+    background-color: transparent;
+    text-color:       @fg;
+}

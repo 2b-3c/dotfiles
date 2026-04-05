@@ -1,0 +1,22 @@
+/* Retro-82 Theme for Rofi */
+
+* {
+    bg:          #05182e;
+    bg-alt:      #0a2640;
+    fg:          #f6dcac;
+    fg-alt:      #3f8f8a;
+    accent:      #faa968;
+    accent2:     #f85525;
+    border:      #faa968;
+    urgent:      #f85525;
+
+    main-bg:     #05182e;
+    main-fg:     #f6dcac;
+    main-br:     #faa968;
+    input-bg:    #0a2640;
+    select-bg:   #faa968;
+    select-fg:   #00172e;
+
+    background-color: transparent;
+    text-color:       @fg;
+}

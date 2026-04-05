@@ -1,0 +1,22 @@
+/* Gruvbox Theme for Rofi */
+
+* {
+    bg:          #282828;
+    bg-alt:      #3c3836;
+    fg:          #d4be98;
+    fg-alt:      #665c54;
+    accent:      #7daea3;
+    accent2:     #ea6962;
+    border:      #7daea3;
+    urgent:      #ea6962;
+
+    main-bg:     #282828;
+    main-fg:     #d4be98;
+    main-br:     #7daea3;
+    input-bg:    #3c3836;
+    select-bg:   #7daea3;
+    select-fg:   #282828;
+
+    background-color: transparent;
+    text-color:       @fg;
+}

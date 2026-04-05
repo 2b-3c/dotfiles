@@ -1,0 +1,9 @@
+/* Miasma for SwayNC */
+@define-color main-bg    #222222;
+@define-color main-fg    #c2c2b0;
+@define-color accent     #78824b;
+@define-color accent-bg  #2c2c2c;
+@define-color hover      #2c2c2c;
+@define-color active     #333333;
+@define-color border     #78824b;
+@define-color inactive-fg #666666;

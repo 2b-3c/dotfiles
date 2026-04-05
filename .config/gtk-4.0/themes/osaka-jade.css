@@ -1,0 +1,41 @@
+/* Osaka Jade — GTK Colors
+ * bg: #111c18  fg: #C1C497  accent: #509475
+ */
+
+@define-color accent_color          #509475;
+@define-color accent_bg_color       #509475;
+@define-color accent_fg_color       #111c18;
+
+@define-color window_bg_color       #111c18;
+@define-color window_fg_color       #C1C497;
+
+@define-color view_bg_color         #111c18;
+@define-color view_fg_color         #C1C497;
+
+@define-color headerbar_bg_color    #111c18;
+@define-color headerbar_fg_color    #C1C497;
+@define-color headerbar_border_color #23372B;
+@define-color headerbar_backdrop_color #1a2b24;
+@define-color headerbar_shade_color rgba(17, 28, 24, 0.08);
+
+@define-color card_bg_color         #162219;
+@define-color card_fg_color         #C1C497;
+@define-color card_shade_color      rgba(17, 28, 24, 0.08);
+
+@define-color dialog_bg_color       #111c18;
+@define-color dialog_fg_color       #C1C497;
+
+@define-color popover_bg_color      #1a2b24;
+@define-color popover_fg_color      #C1C497;
+@define-color popover_shade_color   rgba(17, 28, 24, 0.08);
+
+@define-color sidebar_bg_color      #152018;
+@define-color sidebar_fg_color      #C1C497;
+@define-color sidebar_backdrop_color #1a2b24;
+@define-color sidebar_shade_color   rgba(17, 28, 24, 0.08);
+
+@define-color thumbnail_bg_color    #162219;
+@define-color thumbnail_fg_color    #C1C497;
+
+@define-color shade_color           rgba(17, 28, 24, 0.08);
+@define-color scrollbar_outline_color rgba(17, 28, 24, 0.5);

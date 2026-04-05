@@ -1,0 +1,41 @@
+/* Miasma — GTK Colors
+ * bg: #222222  fg: #c2c2b0  accent: #78824b
+ */
+
+@define-color accent_color          #78824b;
+@define-color accent_bg_color       #78824b;
+@define-color accent_fg_color       #222222;
+
+@define-color window_bg_color       #222222;
+@define-color window_fg_color       #c2c2b0;
+
+@define-color view_bg_color         #222222;
+@define-color view_fg_color         #c2c2b0;
+
+@define-color headerbar_bg_color    #1e1e1e;
+@define-color headerbar_fg_color    #c2c2b0;
+@define-color headerbar_border_color #383838;
+@define-color headerbar_backdrop_color #2a2a2a;
+@define-color headerbar_shade_color rgba(34, 34, 34, 0.08);
+
+@define-color card_bg_color         #282828;
+@define-color card_fg_color         #c2c2b0;
+@define-color card_shade_color      rgba(34, 34, 34, 0.08);
+
+@define-color dialog_bg_color       #222222;
+@define-color dialog_fg_color       #c2c2b0;
+
+@define-color popover_bg_color      #2a2a2a;
+@define-color popover_fg_color      #c2c2b0;
+@define-color popover_shade_color   rgba(34, 34, 34, 0.08);
+
+@define-color sidebar_bg_color      #262626;
+@define-color sidebar_fg_color      #c2c2b0;
+@define-color sidebar_backdrop_color #2a2a2a;
+@define-color sidebar_shade_color   rgba(34, 34, 34, 0.08);
+
+@define-color thumbnail_bg_color    #282828;
+@define-color thumbnail_fg_color    #c2c2b0;
+
+@define-color shade_color           rgba(34, 34, 34, 0.08);
+@define-color scrollbar_outline_color rgba(34, 34, 34, 0.5);

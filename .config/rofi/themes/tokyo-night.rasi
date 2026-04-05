@@ -1,0 +1,22 @@
+/* Tokyo Night Theme for Rofi */
+
+* {
+    bg:          #1a1b26;
+    bg-alt:      #24283b;
+    fg:          #a9b1d6;
+    fg-alt:      #1a1b26;
+    accent:      #7aa2f7;
+    accent2:     #f7768e;
+    border:      #7aa2f7;
+    urgent:      #f7768e;
+
+    main-bg:     #1a1b26;
+    main-fg:     #a9b1d6;
+    main-br:     #7aa2f7;
+    input-bg:    #24283b;
+    select-bg:   #7aa2f7;
+    select-fg:   #1a1b26;
+
+    background-color: transparent;
+    text-color:       @fg;
+}

@@ -1,0 +1,7 @@
+#!/bin/bash
+THEME_NAME_PATH="$HOME/.config/omarchy/current/theme.name"
+if [[ -f "$THEME_NAME_PATH" ]]; then
+  cat "$THEME_NAME_PATH" | sed -E 's/(^|-)([a-z])/\1\u\2/g; s/-/ /g'
+else
+  echo "Gruvbox Light"
+fi

@@ -1,0 +1,37 @@
+/* Ristretto Theme for Waybar */
+
+@define-color main-fg         #e6d9db;
+@define-color main-bg         #2c2525;
+@define-color main-br         #f38d70;
+
+@define-color active-bg       #f38d70;
+@define-color active-fg       #2c2525;
+
+@define-color hover-bg        #3d3536;
+@define-color hover-fg        rgba(230, 217, 219, 0.85);
+
+@define-color white           #f1e5e7;
+@define-color black           #2c2525;
+
+@define-color module-fg       #72696a;
+@define-color workspaces      #332b2c;
+
+@define-color cpuinfo         #332b2c;
+@define-color memory          #302929;
+@define-color cpu             #3d3536;
+@define-color distro-fg       #2c2525;
+@define-color distro-bg       #f38d70;
+@define-color time            #3d3536;
+@define-color date            #302929;
+@define-color tray            #332b2c;
+
+@define-color pulseaudio      #332b2c;
+@define-color backlight       #302929;
+@define-color battery         #3d3536;
+@define-color power           #f38d70;
+
+@define-color good            #adda78;
+@define-color warning         #f9cc6c;
+@define-color critical        #fd6883;
+@define-color full            #adda78;
+@define-color charging        #85dacc;

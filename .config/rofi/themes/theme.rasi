@@ -1,0 +1,22 @@
+/* Gruvbox Light Knight Theme for Rofi */
+
+* {
+    bg:          #f1e4bb;
+    bg-alt:      #ded1ac;
+    fg:          #333231;
+    fg-alt:      #958b73;
+    accent:      #514f49;
+    accent2:     #6f6959;
+    border:      #6f6959;
+    urgent:      #847b66;
+
+    main-bg:     #f1e4bb;
+    main-fg:     #333231;
+    main-br:     #6f6959;
+    input-bg:    #ded1ac;
+    select-bg:   #514f49;
+    select-fg:   #f1e4bb;
+
+    background-color: transparent;
+    text-color:       @fg;
+}

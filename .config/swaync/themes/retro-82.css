@@ -1,0 +1,9 @@
+/* Retro-82 for SwayNC */
+@define-color main-bg    #05182e;
+@define-color main-fg    #f6dcac;
+@define-color accent     #faa968;
+@define-color accent-bg  #0a2640;
+@define-color hover      #0a2640;
+@define-color active     #134e5a;
+@define-color border     #faa968;
+@define-color inactive-fg #3f8f8a;

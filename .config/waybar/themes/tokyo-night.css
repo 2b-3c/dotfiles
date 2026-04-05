@@ -1,0 +1,37 @@
+/* Tokyo Night Theme for Waybar */
+
+@define-color main-fg         #a9b1d6;
+@define-color main-bg         #1a1b26;
+@define-color main-br         #7aa2f7;
+
+@define-color active-bg       #7aa2f7;
+@define-color active-fg       #1a1b26;
+
+@define-color hover-bg        #24283b;
+@define-color hover-fg        rgba(169, 177, 214, 0.75);
+
+@define-color white           #c0caf5;
+@define-color black           #1a1b26;
+
+@define-color module-fg       #444b6a;
+@define-color workspaces      #24283b;
+
+@define-color cpuinfo         #24283b;
+@define-color memory          #1f2335;
+@define-color cpu             #2a2d3e;
+@define-color distro-fg       #1a1b26;
+@define-color distro-bg       #7aa2f7;
+@define-color time            #2a2d3e;
+@define-color date            #1f2335;
+@define-color tray            #24283b;
+
+@define-color pulseaudio      #24283b;
+@define-color backlight       #1f2335;
+@define-color battery         #2a2d3e;
+@define-color power           #7aa2f7;
+
+@define-color good            #9ece6a;
+@define-color warning         #e0af68;
+@define-color critical        #f7768e;
+@define-color full            #9ece6a;
+@define-color charging        #a9b1d6;

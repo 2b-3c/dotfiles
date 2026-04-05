@@ -1,0 +1,37 @@
+/* Osaka-Jade Theme for Waybar */
+
+@define-color main-fg         #C1C497;
+@define-color main-bg         #111c18;
+@define-color main-br         #509475;
+
+@define-color active-bg       #509475;
+@define-color active-fg       #111c18;
+
+@define-color hover-bg        #192820;
+@define-color hover-fg        rgba(193, 196, 151, 0.75);
+
+@define-color white           #F6F5DD;
+@define-color black           #111c18;
+
+@define-color module-fg       #53685B;
+@define-color workspaces      #192820;
+
+@define-color cpuinfo         #192820;
+@define-color memory          #16221d;
+@define-color cpu             #1c2d25;
+@define-color distro-fg       #111c18;
+@define-color distro-bg       #509475;
+@define-color time            #1c2d25;
+@define-color date            #16221d;
+@define-color tray            #192820;
+
+@define-color pulseaudio      #192820;
+@define-color backlight       #16221d;
+@define-color battery         #1c2d25;
+@define-color power           #509475;
+
+@define-color good            #549e6a;
+@define-color warning         #E5C736;
+@define-color critical        #FF5345;
+@define-color full            #549e6a;
+@define-color charging        #C1C497;

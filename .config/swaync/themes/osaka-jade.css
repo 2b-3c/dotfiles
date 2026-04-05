@@ -1,0 +1,9 @@
+/* Osaka-Jade for SwayNC */
+@define-color main-bg    #111c18;
+@define-color main-fg    #C1C497;
+@define-color accent     #509475;
+@define-color accent-bg  #192820;
+@define-color hover      #192820;
+@define-color active     #23372B;
+@define-color border     #509475;
+@define-color inactive-fg #53685B;

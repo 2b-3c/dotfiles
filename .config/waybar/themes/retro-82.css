@@ -1,0 +1,37 @@
+/* Retro-82 Theme for Waybar */
+
+@define-color main-fg         #f6dcac;
+@define-color main-bg         #05182e;
+@define-color main-br         #faa968;
+
+@define-color active-bg       #faa968;
+@define-color active-fg       #00172e;
+
+@define-color hover-bg        #0a2640;
+@define-color hover-fg        rgba(246, 220, 172, 0.85);
+
+@define-color white           #f6dcac;
+@define-color black           #05182e;
+
+@define-color module-fg       #3f8f8a;
+@define-color workspaces      #0a2640;
+
+@define-color cpuinfo         #0a2640;
+@define-color memory          #071e38;
+@define-color cpu             #0d2f4a;
+@define-color distro-fg       #00172e;
+@define-color distro-bg       #faa968;
+@define-color time            #0d2f4a;
+@define-color date            #071e38;
+@define-color tray            #0a2640;
+
+@define-color pulseaudio      #0a2640;
+@define-color backlight       #071e38;
+@define-color battery         #0d2f4a;
+@define-color power           #faa968;
+
+@define-color good            #028391;
+@define-color warning         #e97b3c;
+@define-color critical        #f85525;
+@define-color full            #028391;
+@define-color charging        #f6dcac;

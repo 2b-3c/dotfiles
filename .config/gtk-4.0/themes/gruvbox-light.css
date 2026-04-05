@@ -1,0 +1,41 @@
+/* Gruvbox Light — GTK Colors
+ * bg: #f1e4bb  fg: #333231  accent: #514f49
+ */
+
+@define-color accent_color          #514f49;
+@define-color accent_bg_color       #514f49;
+@define-color accent_fg_color       #f1e4bb;
+
+@define-color window_bg_color       #f1e4bb;
+@define-color window_fg_color       #333231;
+
+@define-color view_bg_color         #f1e4bb;
+@define-color view_fg_color         #333231;
+
+@define-color headerbar_bg_color    #e8d9a8;
+@define-color headerbar_fg_color    #333231;
+@define-color headerbar_border_color #6f6959;
+@define-color headerbar_backdrop_color #ded1ac;
+@define-color headerbar_shade_color rgba(51, 50, 49, 0.07);
+
+@define-color card_bg_color         #ede0b2;
+@define-color card_fg_color         #333231;
+@define-color card_shade_color      rgba(51, 50, 49, 0.07);
+
+@define-color dialog_bg_color       #f1e4bb;
+@define-color dialog_fg_color       #333231;
+
+@define-color popover_bg_color      #ede0b2;
+@define-color popover_fg_color      #333231;
+@define-color popover_shade_color   rgba(51, 50, 49, 0.07);
+
+@define-color sidebar_bg_color      #e8d9a8;
+@define-color sidebar_fg_color      #333231;
+@define-color sidebar_backdrop_color #ded1ac;
+@define-color sidebar_shade_color   rgba(51, 50, 49, 0.07);
+
+@define-color thumbnail_bg_color    #ede0b2;
+@define-color thumbnail_fg_color    #333231;
+
+@define-color shade_color           rgba(51, 50, 49, 0.07);
+@define-color scrollbar_outline_color rgba(241, 228, 187, 0.5);
