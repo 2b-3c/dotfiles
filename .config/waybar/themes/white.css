@@ -1,0 +1,37 @@
+/* White Theme for Waybar */
+
+@define-color main-fg         #000000;
+@define-color main-bg         #ffffff;
+@define-color main-br         #1a1a1a;
+
+@define-color active-bg       #1a1a1a;
+@define-color active-fg       #ffffff;
+
+@define-color hover-bg        #e8e8e8;
+@define-color hover-fg        rgba(0, 0, 0, 0.75);
+
+@define-color white           #ffffff;
+@define-color black           #000000;
+
+@define-color module-fg       #6e6e6e;
+@define-color workspaces      #eeeeee;
+
+@define-color cpuinfo         #eeeeee;
+@define-color memory          #f4f4f4;
+@define-color cpu             #e8e8e8;
+@define-color distro-fg       #ffffff;
+@define-color distro-bg       #1a1a1a;
+@define-color time            #e8e8e8;
+@define-color date            #f4f4f4;
+@define-color tray            #eeeeee;
+
+@define-color pulseaudio      #eeeeee;
+@define-color backlight       #f4f4f4;
+@define-color battery         #e8e8e8;
+@define-color power           #1a1a1a;
+
+@define-color good            #3a3a3a;
+@define-color warning         #6e6e6e;
+@define-color critical        #000000;
+@define-color full            #3a3a3a;
+@define-color charging        #1a1a1a;

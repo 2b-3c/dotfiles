@@ -1,0 +1,105 @@
+/* Image Clipboard */
+
+@import "themes/theme.rasi"
+
+configuration {
+    font:            "JetBrainsMono Nerd Font Bold 10";
+    show-icons:      true;
+    fixed-num-lines: true;
+    disable-history: true;
+    hide-scrollbar:  true;
+}
+
+window {
+    width:            375px;
+    border:           2px solid;
+    border-radius:    0px;
+    border-color:     @border;
+    background-color: @bg;
+    children:         [ mainbox ];
+}
+
+mainbox {
+    margin:           0 0 -1px;
+    spacing:          0;
+    background-color: @border;
+    text-color:       @fg;
+    children:         [ textbox-custom, listview, inputbar ];
+}
+
+textbox-custom {
+    font:             "JetBrainsMono Nerd Font Bold 10";
+    horizontal-align: 0.5;
+    padding:          2px 0;
+    background-color: @accent;
+    text-color:       @bg;
+    expand:           false;
+    content:          "󰅍 Image Clipboard";
+}
+
+listview {
+    border:           2px 0 0;
+    border-radius:    0px;
+    border-color:     @border;
+    lines:            8;
+    fixed-height:     true;
+    dynamic:          false;
+    cycle:            true;
+    margin:           0 0 -4px;
+    padding:          8px 8px 16px;
+    background-color: @bg;
+}
+
+element {
+    orientation:      horizontal;
+    padding:          4px 8px;
+    cursor:           pointer;
+    background-color: inherit;
+    text-color:       @module-fg;
+    spacing:          8px;
+}
+
+element selected active,
+element selected normal {
+    border-radius:    0px;
+    background-color: @active-bg;
+    text-color:       @active-fg;
+}
+
+element-icon {
+    size:             42px;
+    cursor:           inherit;
+    background-color: transparent;
+    vertical-align:   0.5;
+}
+
+element-text {
+    padding:          0 4px;
+    cursor:           inherit;
+    background-color: inherit;
+    text-color:       inherit;
+    vertical-align:   0.5;
+}
+
+inputbar {
+    margin:           -40px 8px 8px;
+    border-radius:    0px;
+    spacing:          inherit;
+    background-color: @hover-bg;
+    text-color:       inherit;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    padding:          8px 6px 8px 12px;
+    background-color: inherit;
+    text-color:       @accent;
+}
+
+entry {
+    placeholder:      "Search";
+    padding:          8px 12px 8px 0;
+    cursor:           text;
+    background-color: inherit;
+    text-color:       @fg;
+}

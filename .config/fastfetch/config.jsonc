@@ -1,0 +1,151 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "file",
+    "source": "~/.config/fastfetch/onyx.txt",
+    "color": { "1": "green" },
+    "padding": {
+      "top": 2,
+      "right": 6,
+      "left": 2
+    }
+  },
+  "display": {
+    "separator": " "
+  },
+  "modules": [
+    "break",
+    {
+      "type": "custom",
+      "key": "{#7} HARDWARE INFORMATION {#}{#32}\uE0B0",
+      "keyColor": "green"
+    },
+    {
+      "type": "host",
+      "key": "├─ PC  ",
+      "keyColor": "green"
+    },
+    {
+      "type": "cpu",
+      "key": "├─ CPU ",
+      "showPeCoreCount": true,
+      "keyColor": "green"
+    },
+    {
+      "type": "gpu",
+      "key": "├─ GPU ",
+      "detectionMethod": "pci",
+      "keyColor": "green"
+    },
+    {
+      "type": "display",
+      "key": "├─ RES ",
+      "keyColor": "green",
+      "compactType": "original"
+    },
+    {
+      "type": "disk",
+      "key": "├─ DSK ",
+      "keyColor": "green"
+    },
+    {
+      "type": "memory",
+      "key": "├─ RAM ",
+      "keyColor": "green"
+    },
+    {
+      "type": "swap",
+      "key": "└─ SWP ",
+      "keyColor": "green"
+    },
+    "break",
+    {
+      "type": "custom",
+      "key": "{#7} SOFTWARE INFORMATION {#}{#36}\uE0B0",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "command",
+      "key": "├─ OS  ",
+      "keyColor": "cyan",
+      "text": "bash ~/.config/fastfetch/scripts/version.sh"
+    },
+    {
+      "type": "command",
+      "key": "├─ BR  ",
+      "keyColor": "cyan",
+      "text": "bash ~/.config/fastfetch/scripts/version-branch.sh"
+    },
+    {
+      "type": "command",
+      "key": "├─ CH  ",
+      "keyColor": "cyan",
+      "text": "bash ~/.config/fastfetch/scripts/version-channel.sh"
+    },
+    {
+      "type": "kernel",
+      "key": "├─ KER ",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "wm",
+      "key": "├─ WM  ",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "terminal",
+      "key": "├─ TER ",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "packages",
+      "key": "├─ PKG ",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "wmtheme",
+      "key": "├─ THM ",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "command",
+      "key": "├─ CLR ",
+      "keyColor": "cyan",
+      "text": "bash ~/.config/fastfetch/scripts/theme-current.sh"
+    },
+    {
+      "type": "terminalfont",
+      "key": "└─ FNT ",
+      "keyColor": "cyan"
+    },
+    "break",
+    {
+      "type": "custom",
+      "key": "{#7} AGE / UPTIME / UPDATE {#}{#35}\uE0B0",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "command",
+      "key": "├─ AGE ",
+      "keyColor": "magenta",
+      "text": "echo $(( ($(date +%s) - $(stat -c %W /)) / 86400 )) days"
+    },
+    {
+      "type": "uptime",
+      "key": "├─ UPT ",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "command",
+      "key": "└─ UPD ",
+      "keyColor": "magenta",
+      "text": "bash ~/.config/fastfetch/scripts/version-pkgs.sh"
+    },
+    "break",
+    {
+      "type": "colors",
+      "symbol": "squares",
+      "paddingLeft": 1
+    }
+  ]
+}

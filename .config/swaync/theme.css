@@ -1,0 +1,9 @@
+/* Vantablack for SwayNC */
+@define-color main-bg    #0d0d0d;
+@define-color main-fg    #ffffff;
+@define-color accent     #8d8d8d;
+@define-color accent-bg  #141414;
+@define-color hover      #141414;
+@define-color active     #1a1a1a;
+@define-color border     #8d8d8d;
+@define-color inactive-fg #6e6e6e;

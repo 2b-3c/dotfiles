@@ -1,0 +1,37 @@
+/* Vantablack Theme for Waybar */
+
+@define-color main-fg         #ffffff;
+@define-color main-bg         #0d0d0d;
+@define-color main-br         #8d8d8d;
+
+@define-color active-bg       #8d8d8d;
+@define-color active-fg       #0d0d0d;
+
+@define-color hover-bg        #1a1a1a;
+@define-color hover-fg        rgba(255, 255, 255, 0.75);
+
+@define-color white           #ffffff;
+@define-color black           #0d0d0d;
+
+@define-color module-fg       #6e6e6e;
+@define-color workspaces      #1c1c1c;
+
+@define-color cpuinfo         #141414;
+@define-color memory          #111111;
+@define-color cpu             #1a1a1a;
+@define-color distro-fg       #0d0d0d;
+@define-color distro-bg       #8d8d8d;
+@define-color time            #1a1a1a;
+@define-color date            #111111;
+@define-color tray            #141414;
+
+@define-color pulseaudio      #141414;
+@define-color backlight       #111111;
+@define-color battery         #1a1a1a;
+@define-color power           #8d8d8d;
+
+@define-color good            #b6b6b6;
+@define-color warning         #cecece;
+@define-color critical        #a4a4a4;
+@define-color full            #b6b6b6;
+@define-color charging        #ffffff;

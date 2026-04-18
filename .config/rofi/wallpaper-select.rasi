@@ -1,0 +1,100 @@
+/* Wallpaper Selector — Pink Lavender Theme */
+/* Matches themes/theme.rasi color palette */
+
+@import "themes/theme.rasi"
+
+* {
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+window {
+    background-color: @bg;
+    border:           2px solid;
+    border-color:     @border;
+    border-radius:    0px;
+    location:         center;
+    anchor:           center;
+    width:            80%;
+    height:           60%;
+}
+
+mainbox {
+    background-color: transparent;
+    padding:          12px;
+    spacing:          10px;
+    children:         [ "inputbar", "listview" ];
+}
+
+inputbar {
+    background-color: @bg-alt;
+    border-radius:    0px;
+    padding:          8px 14px;
+    spacing:          8px;
+    children:         [ "prompt", "entry" ];
+}
+
+prompt {
+    text-color: @accent;
+    font:       "FiraCode Nerd Font Bold 11";
+}
+
+entry {
+    text-color:        @fg;
+    placeholder:       "Search wallpaper...";
+    placeholder-color: @fg-alt;
+}
+
+listview {
+    background-color: transparent;
+    scrollbar:        false;
+    columns:          5;
+    lines:            2;
+    spacing:          12px;
+    padding:          10px;
+    cycle:            true;
+    dynamic:          true;
+    layout:           vertical;
+    fixed-height:     true;
+    fixed-columns:    true;
+}
+
+element {
+    background-color: transparent;
+    border-radius:    0px;
+    padding:          8px;
+    spacing:          6px;
+    orientation:      vertical;
+    cursor:           pointer;
+}
+
+element normal.normal {
+    background-color: @bg-alt;
+    text-color:       @fg;
+}
+
+element selected.normal {
+    background-color: @accent;
+    text-color:       @select-fg;
+}
+
+element alternate.normal {
+    background-color: @bg-alt;
+    text-color:       @fg;
+}
+
+element-icon {
+    size:             120px;
+    cursor:           inherit;
+    background-color: transparent;
+    padding:          0px;
+}
+
+element-text {
+    cursor:           inherit;
+    background-color: transparent;
+    text-color:       inherit;
+    font:             "FiraCode Nerd Font 9";
+    horizontal-align: 0.5;
+    padding:          4px 0px 0px 0px;
+}

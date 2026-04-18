@@ -1,0 +1,22 @@
+/* White Theme for Rofi */
+
+* {
+    bg:          #ffffff;
+    bg-alt:      #eeeeee;
+    fg:          #000000;
+    fg-alt:      #6e6e6e;
+    accent:      #1a1a1a;
+    accent2:     #2a2a2a;
+    border:      #6e6e6e;
+    urgent:      #2a2a2a;
+
+    main-bg:     #ffffff;
+    main-fg:     #000000;
+    main-br:     #1a1a1a;
+    input-bg:    #eeeeee;
+    select-bg:   #1a1a1a;
+    select-fg:   #ffffff;
+
+    background-color: transparent;
+    text-color:       @fg;
+}
