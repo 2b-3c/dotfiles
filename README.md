@@ -1,146 +1,299 @@
 # ONYX Dotfiles
 
-![Screenshot](screenshots/1.png)
-![Screenshot](screenshots/2.png)
-![Screenshot](screenshots/3.png)
-![Screenshot](screenshots/4.png)
-
-A personal Hyprland setup — clean, fast, and themeable.
+> نظام إعدادات شخصي مبني على **Hyprland** — نظيف، سريع، وقابل للتخصيص الكامل عبر نظام ثيمات موحّد.
 
 ---
 
-## 🖥️ Components
+## 📋 المحتويات
 
-| Component | Tool |
-|-----------|------|
+- [المكونات](#-المكونات)
+- [المميزات](#-المميزات)
+  - [نظام الثيمات](#-نظام-الثيمات)
+  - [شاشة تسجيل الدخول SDDM](#-شاشة-تسجيل-الدخول-sddm)
+  - [قائمة خلفيات الشاشة](#-قائمة-خلفيات-الشاشة)
+  - [الحافظة](#-الحافظة)
+  - [شاشة القفل](#-شاشة-القفل)
+  - [قائمة Rofi الرئيسية](#-قائمة-rofi-الرئيسية)
+  - [Wi-Fi والبلوتوث](#-wi-fi-والبلوتوث)
+  - [مشغّل الوسائط](#-مشغّل-الوسائط)
+  - [إضاءة الليل](#-إضاءة-الليل)
+  - [مجموعات النوافذ المبوّبة](#-مجموعات-النوافذ-المبوّبة)
+  - [Scratchpad](#-scratchpad)
+  - [مراقبة البطارية](#-مراقبة-البطارية)
+  - [نظام Hooks](#-نظام-hooks)
+  - [نظام المهاجرة التلقائية](#-نظام-المهاجرة-التلقائية)
+  - [أداة Debug](#-أداة-debug)
+  - [ملفات Waybar الديناميكية](#-ملفات-waybar-الديناميكية)
+  - [ملفات تعريف الطاقة](#-ملفات-تعريف-الطاقة)
+- [التثبيت](#-التثبيت)
+- [التبعيات](#-التبعيات)
+- [اختصارات لوحة المفاتيح](#-اختصارات-لوحة-المفاتيح)
+- [هيكل الملفات](#-هيكل-الملفات)
+- [الإعداد اليدوي بعد التثبيت](#-الإعداد-اليدوي-بعد-التثبيت)
+- [ملاحظات](#-ملاحظات)
+
+---
+
+## 🖥️ المكونات
+
+| المكوّن | الأداة |
+|---------|--------|
 | Compositor | Hyprland |
-| Bar | Waybar |
-| Launcher | Rofi (wayland) |
-| Terminal | Kitty |
-| Notifications | SwayNC |
-| Wallpaper | awww |
-| Lock Screen | Hyprlock + Hypridle |
-| Shell | Zsh |
-| Shell Prompt | Starship |
-| File Manager | Nautilus |
-| Clipboard | cliphist |
-| System Monitor | btop |
-| Visualizer | cava |
-| File Previewer | ctpv |
-| ls replacement | lsd |
-| Night Light | hyprsunset |
-| Multiplexer | tmux |
-| File Manager (TUI) | yazi |
-| Fetch | fastfetch |
-| Screenshot Editor | Satty |
-| Screen Recorder | gpu-screen-recorder |
-| Login Screen | SDDM (sddm-astronaut-theme) |
+| شريط الحالة | Waybar |
+| مشغّل التطبيقات | Rofi (Wayland) |
+| الطرفية | Kitty |
+| الإشعارات | SwayNC |
+| خلفية الشاشة | awww |
+| شاشة القفل | Hyprlock + Hypridle |
+| الـ Shell | Zsh |
+| مؤشر الـ Shell | Starship |
+| مدير الملفات (واجهة رسومية) | Nautilus |
+| مدير الملفات (TUI) | Yazi |
+| الحافظة | cliphist |
+| مراقب النظام | btop |
+| المُرئي الصوتي | cava |
+| معاينة الملفات | ctpv |
+| بديل `ls` | lsd |
+| إضاءة الليل | hyprsunset |
+| المُتعدِّد للطرفية | tmux |
+| أداة المعلومات | fastfetch |
+| محرر لقطات الشاشة | Satty |
+| مسجّل الشاشة | gpu-screen-recorder |
+| شاشة تسجيل الدخول | SDDM |
 
 ---
 
-## ✨ Features
+## ✨ المميزات
 
-### 🎨 Theme System
+### 🎨 نظام الثيمات
 
-**Available themes:** `Void Purple` · `Deep Cyan` · `Sakura Pink` · `Lavender` · `Sky Blue` · `Inferno`
+**الثيمات المتاحة:**
 
-Applies to: Waybar · SwayNC · Kitty · Rofi · btop · cava · Starship · Window borders · Wallpaper · Icons · GTK
+| الثيم | النوع |
+|-------|-------|
+| `void_purple` | Dark |
+| `deep_cyan` | Dark |
+| `sakura_pink` | Light |
+| `lavender` | Light |
+| `sky_blue` | Light |
+| `inferno` | Light |
 
-#### مبني على نظام colors.toml + Templates
-كل ثيم ملف واحد `colors.toml` يحتوي على جميع الألوان. عند تطبيق الثيم يقوم `theme-set.sh` بتوليد ملفات الإعداد تلقائياً من القوالب في `themes/templates/`.
+**نطاق التطبيق:** Waybar · SwayNC · Kitty · Rofi · btop · cava · Starship · حدود النوافذ · خلفية الشاشة · الأيقونات · GTK
+
+#### آلية العمل
+
+كل ثيم عبارة عن ملف واحد `colors.toml` يحتوي على جميع قيم الألوان. عند تطبيق أي ثيم، يقوم `theme-set.sh` تلقائياً بتوليد جميع ملفات الإعداد من القوالب الموجودة في `~/.config/themes/templates/`.
 
 ```bash
 # تطبيق ثيم مباشرة من الطرفية
 ~/.config/hypr/scripts/theme-set.sh void_purple
 ~/.config/hypr/scripts/theme-set.sh sky_blue
+~/.config/hypr/scripts/theme-set.sh sakura_pink
 
-# أو من Rofi: Super + Space → Style → Theme
+# أو من واجهة Rofi: Super + Space → Style → Theme
 ```
 
 #### إضافة ثيم جديد
+
 ```bash
+# أنشئ مجلد الثيم داخل dark أو light حسب النوع
 mkdir -p ~/.config/themes/dark/my_theme
-# أنشئ colors.toml فقط — النظام يولّد الباقي تلقائياً
+
+# أنشئ ملف colors.toml فقط — النظام يولّد الباقي تلقائياً
+# انظر أي ثيم موجود كنموذج
 ```
 
 ---
 
-### 🖥️ SDDM Login Screen
+### 🖥️ شاشة تسجيل الدخول SDDM
 
-**Available themes:** `Japanese Aesthetic`
+**الثيمات المتاحة:**
+- `silent` — ثيم نظيف وهادئ مع دعم اختيار الجلسة ولوحة المفاتيح الافتراضية
+- `astronaut` — ثيم بأسلوب فضائي
 
----
+تحتوي ثيمات SDDM على خط **Red Hat** المدمج (Regular, Bold, Mono, Display) ودعم كامل للوحة المفاتيح الافتراضية عبر `QtQuick.VirtualKeyboard`.
 
-### 󰸉 Wallpaper Menu (`Super + I`)
-
-Change desktop wallpaper from `~/Pictures/Wallpapers/` with thumbnail previews.
-
----
-
-### 󰅍 Clipboard
-- `Super + C` — Text clipboard
-- `Super + Shift + C` — Image clipboard with thumbnails
-
----
-
-### 󰷛 Lock Screen (`Super + Shift + X`)
-- Blurred screenshot as background
-- Time and date centered with Electroharmonix font
-- Password input field with sharp corners
+لتغيير الثيم:
+```bash
+# من Rofi: Super + Space → Style → SDDM Theme
+# أو من الطرفية:
+~/.config/rofi/scripts/sddm-theme.sh
+```
 
 ---
 
-### 󰀻 Rofi Main Menu (`Super + Space`)
+### 🖼️ قائمة خلفيات الشاشة (`Super + I`)
 
-| Option | Function |
-|--------|----------|
-| Apps | Full app launcher |
-| Install | Install packages (Pacman / AUR) |
-| Remove | Remove packages |
-| Update | Update system |
-| Wallpaper | Change wallpaper |
-| Style | Themes · SDDM Theme |
-| About | System info |
-| System | Lock · Logout · Suspend · Reboot · Shutdown |
+يفتح قائمة Rofi تعرض معاينات مصغّرة لجميع الصور الموجودة في `~/Pictures/Wallpapers/`.  
+يتم حفظ مسار الخلفية الحالية وإعادة تطبيقها تلقائياً عند كل إقلاع عبر `restore_wallpaper.sh`.
+
+لدعم خلفيات الفيديو:
+```bash
+~/.config/hypr/scripts/video-wallpaper.sh
+```
 
 ---
 
-### 󰤨 Wi-Fi & Bluetooth Menus
-- **Wi-Fi menu** — connect to networks directly from Rofi
-- **Bluetooth menu** — manage paired devices from Rofi
-- Access via `Super + Space` → dedicated menus or Waybar click
+### 📋 الحافظة
+
+| الاختصار | الوظيفة |
+|----------|---------|
+| `Super + C` | الحافظة النصية مع سجل كامل |
+| `Super + Shift + C` | الحافظة المرئية مع معاينات مصغّرة |
+
+تعمل الحافظة عبر `cliphist` وتخزّن النصوص والصور بشكل منفصل.
 
 ---
 
-### 󰝚 Now Playing (`Super + O`)
-Media player controls in a floating Rofi overlay — shows current track, play/pause, next/previous.
+### 🔒 شاشة القفل (`Super + Shift + X`)
+
+مبنية على **Hyprlock + Hypridle** مع:
+- لقطة شاشة ضبابية كخلفية
+- عرض الوقت والتاريخ في المنتصف بخط **Electroharmonix**
+- حقل إدخال كلمة المرور بزوايا حادة
+- عرض مستوى البطارية عبر `battery.sh`
+- مؤشر تغيير لغة لوحة المفاتيح عبر `lang_notify.sh`
 
 ---
 
-### 🌙 Night Light (hyprsunset)
-Toggle warm color temperature with `Super + Shift + N` or `Super + F7`.
+### 🚀 قائمة Rofi الرئيسية (`Super + Space`)
+
+| الخيار | الوظيفة |
+|--------|---------|
+| Apps | مشغّل التطبيقات الكامل |
+| Install | تثبيت الحزم (Pacman / AUR) |
+| Remove | إزالة الحزم |
+| Update | تحديث النظام |
+| Wallpaper | تغيير خلفية الشاشة |
+| Style | الثيمات وثيم SDDM |
+| About | معلومات النظام (fastfetch) |
+| System | القفل · تسجيل الخروج · التعليق · إعادة التشغيل · الإيقاف |
 
 ---
 
-### 󰌆 File Manager (`Super + E`)
-Opens Nautilus file manager.
+### 📡 Wi-Fi والبلوتوث
+
+- **قائمة Wi-Fi** — الاتصال بالشبكات مباشرةً من Rofi
+- **قائمة البلوتوث** — إدارة الأجهزة المقترنة من Rofi
+- الوصول عبر: `Super + Space` ← القوائم المخصصة، أو النقر على Waybar
 
 ---
 
-### 🪟 Window Groups (Tabbed Windows)
-- `Super + G` — Toggle window group
-- `Super + Alt + G` — Move window out of group
-- `Super + Alt + Tab` / `Super + Ctrl + Left/Right` — Cycle group tabs
+### 🎵 مشغّل الوسائط (`Super + O`)
+
+يعرض تحكمات مشغّل الوسائط الحالي في نافذة Rofi عائمة:
+- اسم المسار الحالي
+- أزرار التشغيل/الإيقاف، التالي، السابق
+
+---
+
+### 🌙 إضاءة الليل (hyprsunset)
+
+يضبط درجة حرارة اللون الدافئة لتقليل إجهاد العينين في الليل.
+
+| الاختصار | الوظيفة |
+|----------|---------|
+| `Super + Shift + N` | تبديل إضاءة الليل |
+| `Super + F7` | تبديل إضاءة الليل (بديل) |
+
+---
+
+### 🪟 مجموعات النوافذ المبوّبة
+
+يدعم Hyprland تجميع النوافذ في علامات تبويب (Groups):
+
+| الاختصار | الوظيفة |
+|----------|---------|
+| `Super + G` | تبديل مجموعة النافذة |
+| `Super + Alt + G` | نقل النافذة خارج المجموعة |
+| `Super + Alt + Tab` | التنقل للأمام في علامات التبويب |
+| `Super + Alt + Shift + Tab` | التنقل للخلف في علامات التبويب |
+| `Super + Ctrl + Left/Right` | التنقل بين علامات تبويب المجموعة |
+| `Super + Alt + Arrows` | نقل النافذة إلى مجموعة مجاورة |
 
 ---
 
 ### 📌 Scratchpad
-- `Super + S` — Toggle scratchpad
-- `Super + Alt + S` — Move window to scratchpad
+
+نافذة خفية يمكن استدعاؤها في أي وقت:
+
+| الاختصار | الوظيفة |
+|----------|---------|
+| `Super + S` | إظهار/إخفاء الـ Scratchpad |
+| `Super + Alt + S` | نقل نافذة إلى الـ Scratchpad |
 
 ---
 
-## ⚙️ Installation
+### 🔋 مراقبة البطارية
+
+- تنبيه تلقائي عند انخفاض البطارية إلى **10%** عبر مؤقت systemd (كل 30 ثانية)
+- يمكن تخصيص الاستجابة عبر نظام Hooks:
+
+```bash
+# أضف السكريبت هنا لتشغيل صوت أو أي إجراء مخصص
+~/.config/onyx/hooks/battery-low
+```
+
+---
+
+### 🪝 نظام Hooks
+
+أضف سكريبتات مخصصة في `~/.config/onyx/hooks/` لتنفيذ إجراءات عند أحداث معينة:
+
+| ملف الـ Hook | متى يُشغَّل |
+|-------------|------------|
+| `battery-low` | عند وصول البطارية لـ 10% |
+| `theme-set` | عند تطبيق ثيم جديد |
+| `font-set` | عند تغيير الخط |
+| `post-update` | بعد تحديث النظام |
+
+> ملفات نموذجية بامتداد `.sample` متاحة كنقطة بداية.
+
+---
+
+### 🔄 نظام المهاجرة التلقائية
+
+التغييرات في الإعدادات بين الإصدارات تُطبَّق تلقائياً عبر مجلد `migrations/`.  
+الحالة مُتتبَّعة في `~/.local/state/onyx/migrations/`.
+
+---
+
+### 🐛 أداة Debug
+
+```bash
+~/.config/hypr/scripts/debug.sh
+```
+
+تجمع معلومات النظام والسجلات والحزم المثبّتة. تدعم الرفع إلى `0x0.st` لمشاركة نتائج التشخيص.
+
+---
+
+### 📺 ملفات Waybar الديناميكية
+
+مؤشرات حية في Waybar:
+
+| السكريبت | يُظهر |
+|---------|-------|
+| `screen-recording.sh` | أيقونة 󰻂 أثناء التسجيل |
+| `idle-indicator.sh` | أيقونة 󱫖 عند إيقاف القفل التلقائي |
+| `notification-silencing.sh` | أيقونة 󰂛 في وضع عدم الإزعاج |
+| `nightlight-indicator.sh` | أيقونة  عند تفعيل إضاءة الليل |
+
+---
+
+### ⚡ ملفات تعريف الطاقة
+
+```bash
+~/.config/hypr/scripts/powerprofiles-set.sh toggle    # تبديل: performance ↔ balanced
+~/.config/hypr/scripts/powerprofiles-set.sh ac        # تفعيل performance عند الشحن
+~/.config/hypr/scripts/powerprofiles-set.sh battery   # تفعيل balanced عند البطارية
+```
+
+---
+
+## ⚙️ التثبيت
+
+### تلقائي (موصى به)
 
 ```bash
 git clone https://github.com/2b-3c/dotfiles
@@ -148,17 +301,26 @@ cd dotfiles
 bash install.sh
 ```
 
-> The installer handles everything: packages, configs, permissions, services, and applies Black Hole as the default theme.
+> يقوم المثبّت بكل شيء تلقائياً: تثبيت الحزم، نسخ الإعدادات، ضبط الصلاحيات، تشغيل الخدمات، وتطبيق الثيم الافتراضي **void_purple**.  
+> يُحفظ نسخ احتياطي من إعداداتك الحالية في `~/.config_backup_*` قبل كل تثبيت.
 
-### Manual
+### يدوي
 
 ```bash
 git clone https://github.com/2b-3c/dotfiles
 cd dotfiles
 
+# نسخ ملفات الإعداد
 cp -r .config/* ~/.config/
+
+# نسخ ملفات Home
+cp .zshrc ~/
+cp .gitconfig ~/
+
+# إنشاء المجلدات المطلوبة
 mkdir -p ~/Pictures/Screenshots ~/Pictures/Wallpapers ~/Videos
 
+# منح صلاحيات التنفيذ للسكريبتات
 find ~/.config/rofi/scripts      -type f -name "*.sh" -exec chmod +x {} +
 find ~/.config/waybar/scripts    -type f               -exec chmod +x {} +
 find ~/.config/swaync/scripts    -type f -name "*.sh" -exec chmod +x {} +
@@ -168,9 +330,12 @@ find ~/.config/fastfetch/scripts -type f -name "*.sh" -exec chmod +x {} +
 
 ---
 
-## 📦 Dependencies
+## 📦 التبعيات
 
-### Core
+> **ملاحظة:** التثبيت التلقائي عبر `install.sh` يتولى تثبيت هذه الحزم كلها.
+
+### الأساسية
+
 ```
 hyprland hyprlock hypridle hyprsunset
 xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xorg-xwayland
@@ -178,19 +343,22 @@ grim slurp grimblast-git awww wl-clipboard imagemagick iw
 hyprpolkitagent
 ```
 
-### Audio
+### الصوت
+
 ```
 pipewire pipewire-pulse pipewire-alsa wireplumber
 pamixer playerctl libpulse wiremix python-gobject
 ```
 
-### Network
+### الشبكة
+
 ```
 networkmanager network-manager-applet
 bluez bluez-utils bluetui impala rfkill
 ```
 
-### UI
+### الواجهة
+
 ```
 waybar python python-requests pacman-contrib upower jq curl
 rofi-wayland rofi-emoji
@@ -198,7 +366,8 @@ swaync
 brightnessctl libnotify
 ```
 
-### Applications
+### التطبيقات
+
 ```
 kitty firefox nautilus
 btop fastfetch cava gum
@@ -209,7 +378,8 @@ satty gpu-screen-recorder v4l-utils v4l2loopback-dkms linux-headers
 hyprpicker cliphist fzf zoxide
 ```
 
-### Fonts & Icons
+### الخطوط والأيقونات
+
 ```
 ttf-firacode-nerd ttf-jetbrains-mono-nerd
 noto-fonts noto-fonts-emoji
@@ -217,170 +387,204 @@ yaru-icon-theme bibata-cursor-theme
 ```
 
 ### SDDM
+
 ```
 sddm qt6-svg qt6-virtualkeyboard qt6-multimedia-ffmpeg
 ```
 
-> The `Electroharmonix` font used in the lock screen is bundled in `sddm-theme/Fonts/`.
+> خط **Electroharmonix** المستخدم في شاشة القفل مضمّن في `sddm/silent/fonts/` — لا حاجة لتثبيته يدوياً.  
+> خط **Red Hat** مضمّن أيضاً في ثيمات SDDM.
 
 ---
 
-## ⌨️ Keybindings
+## ⌨️ اختصارات لوحة المفاتيح
 
-> `$mod` = Super
+> `$mod` = مفتاح Super (Windows)
 
-### Menus
+### القوائم
 
-| Shortcut | Action |
-|----------|--------|
-| `Super + Space` | Main menu |
-| `Super + A` | App launcher |
-| `Super + R` | Run launcher |
-| `Super + C` | Text clipboard |
-| `Super + Shift + C` | Image clipboard |
-| `Super + .` | Emoji picker |
-| `Super + W` | Window switcher |
-| `Super + O` | Now Playing |
-| `Super + I` | Wallpaper selector |
+| الاختصار | الوظيفة |
+|----------|---------|
+| `Super + Space` | القائمة الرئيسية |
+| `Super + A` | مشغّل التطبيقات |
+| `Super + R` | مشغّل الأوامر |
+| `Super + C` | الحافظة النصية |
+| `Super + Shift + C` | الحافظة المرئية |
+| `Super + .` | منتقي الرموز التعبيرية |
+| `Super + W` | محوّل النوافذ |
+| `Super + O` | التحكم في الوسائط الحالية |
+| `Super + I` | منتقي خلفية الشاشة |
 
-### Applications
+### التطبيقات
 
-| Shortcut | Action |
-|----------|--------|
-| `Super + T` | Terminal (Kitty) |
-| `Super + E` | File manager (Nautilus) |
-| `Super + F` | Browser (Firefox) |
-| `Super + N` | Toggle notifications |
+| الاختصار | الوظيفة |
+|----------|---------|
+| `Super + T` | الطرفية (Kitty) |
+| `Super + E` | مدير الملفات (Nautilus) |
+| `Super + F` | المتصفح (Firefox) |
+| `Super + N` | إظهار/إخفاء الإشعارات |
 
-### Screenshots
+### لقطات الشاشة
 
-| Shortcut | Action |
-|----------|--------|
-| `Print` | Smart screenshot (click window or draw region) |
-| `Super + Print` | Full screen screenshot |
-| `Ctrl + Super + Print` | Window snap screenshot |
-| `Super + Shift + S` | Region screenshot to clipboard only |
+| الاختصار | الوظيفة |
+|----------|---------|
+| `Print` | لقطة ذكية (نقر على نافذة أو رسم منطقة) |
+| `Super + Print` | لقطة شاشة كاملة |
+| `Ctrl + Super + Print` | لقطة نافذة محددة |
+| `Super + Shift + S` | لقطة منطقة محددة إلى الحافظة فقط |
 
-> Screenshots are saved to `~/Pictures/Screenshots/` and copied to clipboard. A notification with an **Edit** button opens Satty for annotation.
+> تُحفظ اللقطات في `~/Pictures/Screenshots/` وتُنسخ إلى الحافظة. يظهر إشعار بزر **Edit** لفتح Satty للتعليق عليها.
 
-### Screen Recording
+### تسجيل الشاشة
 
-| Shortcut | Action |
-|----------|--------|
-| `Super + Shift + R` | Start / stop screen recording |
-| `Super + Shift + Alt + R` | Start recording with desktop + mic audio |
+| الاختصار | الوظيفة |
+|----------|---------|
+| `Super + Shift + R` | بدء/إيقاف تسجيل الشاشة |
+| `Super + Shift + Alt + R` | بدء التسجيل مع صوت الحاسوب والميكروفون |
 
-> Recordings are saved to `~/Videos/`.
+> تُحفظ التسجيلات في `~/Videos/`.
 
-### Audio
+### الصوت
 
-| Shortcut | Action |
-|----------|--------|
-| `XF86AudioRaiseVolume` | Volume up |
-| `XF86AudioLowerVolume` | Volume down |
-| `XF86AudioMute` | Mute |
-| `XF86AudioMicMute` | Mute microphone |
-| `XF86AudioPlay/Pause` | Play/Pause |
-| `XF86AudioNext/Prev` | Next/Previous track |
-| `Super + XF86AudioMute` | Switch audio output device |
+| الاختصار | الوظيفة |
+|----------|---------|
+| `XF86AudioRaiseVolume` | رفع الصوت |
+| `XF86AudioLowerVolume` | خفض الصوت |
+| `XF86AudioMute` | كتم الصوت |
+| `XF86AudioMicMute` | كتم الميكروفون |
+| `XF86AudioPlay/Pause` | تشغيل/إيقاف مؤقت |
+| `XF86AudioNext/Prev` | التالي/السابق |
+| `Super + XF86AudioMute` | تبديل جهاز الإخراج الصوتي |
 
-### Brightness
+### السطوع
 
-| Shortcut | Action |
-|----------|--------|
-| `XF86MonBrightnessUp/Down` | Brightness up/down |
+| الاختصار | الوظيفة |
+|----------|---------|
+| `XF86MonBrightnessUp` | رفع السطوع |
+| `XF86MonBrightnessDown` | خفض السطوع |
 
-### Display & Layout
+### الشاشة والتخطيط
 
-| Shortcut | Action |
-|----------|--------|
-| `Super + F8` | Cycle monitor scaling |
-| `Super + Shift + F8` | Toggle single-window square aspect ratio |
-| `Super + Shift + N` / `Super + F7` | Toggle night light (hyprsunset) |
-| `Super + L` | Toggle workspace layout (dwindle ↔ master) |
-| `Super + Backspace` | Toggle window transparency |
-| `Super + Shift + Backspace` | Toggle window gaps |
+| الاختصار | الوظيفة |
+|----------|---------|
+| `Super + F8` | تدوير مقياس الشاشة |
+| `Super + Shift + F8` | تبديل نسبة عرض النافذة الواحدة |
+| `Super + Shift + N` / `Super + F7` | تبديل إضاءة الليل |
+| `Super + L` | تبديل تخطيط مساحات العمل (dwindle ↔ master) |
+| `Super + Backspace` | تبديل شفافية النافذة |
+| `Super + Shift + Backspace` | تبديل مسافات النوافذ |
 
-### Window Management
+### إدارة النوافذ
 
-| Shortcut | Action |
-|----------|--------|
-| `Super + Q` | Close window |
-| `Super + V` | Toggle floating |
-| `Super + P` | Toggle pseudo-tiling |
-| `Super + J` | Toggle split |
-| `Super + F11` | Full screen |
-| `Super + U` | Pop window out (float + pin) |
-| `Super + Arrows` | Move focus |
-| `Super + Shift + Arrows` | Swap window |
-| `Super + [-] / [=]` | Resize window horizontally |
-| `Super + Shift + [-] / [=]` | Resize window vertically |
-| `Super + Mouse drag` | Move window |
-| `Super + Right Click` | Resize window |
-| `Alt + Tab` | Cycle to next window |
-| `Alt + Shift + Tab` | Cycle to previous window |
+| الاختصار | الوظيفة |
+|----------|---------|
+| `Super + Q` | إغلاق النافذة |
+| `Super + V` | تبديل النافذة العائمة |
+| `Super + P` | تبديل الـ Pseudo-tiling |
+| `Super + J` | تبديل الانقسام |
+| `Super + F11` | ملء الشاشة |
+| `Super + U` | إبراز النافذة (عائمة ومثبّتة) |
+| `Super + Arrows` | تحريك التركيز |
+| `Super + Shift + Arrows` | تبادل موضع النافذة |
+| `Super + [-]` / `Super + [=]` | تغيير حجم النافذة أفقياً |
+| `Super + Shift + [-]` / `Super + Shift + [=]` | تغيير حجم النافذة عمودياً |
+| `Super + سحب الماوس` | تحريك النافذة |
+| `Super + زر الماوس الأيمن` | تغيير حجم النافذة |
+| `Alt + Tab` | التنقل للأمام بين النوافذ |
+| `Alt + Shift + Tab` | التنقل للخلف بين النوافذ |
 
-### Window Groups (Tabbed)
+### مجموعات النوافذ (Tabbed)
 
-| Shortcut | Action |
-|----------|--------|
-| `Super + G` | Toggle window group |
-| `Super + Alt + G` | Move window out of group |
-| `Super + Alt + Tab` | Next window in group |
-| `Super + Alt + Shift + Tab` | Previous window in group |
-| `Super + Ctrl + Left/Right` | Cycle group tabs |
-| `Super + Alt + Arrows` | Move window into adjacent group |
+| الاختصار | الوظيفة |
+|----------|---------|
+| `Super + G` | تبديل مجموعة النافذة |
+| `Super + Alt + G` | نقل النافذة خارج المجموعة |
+| `Super + Alt + Tab` | علامة التبويب التالية |
+| `Super + Alt + Shift + Tab` | علامة التبويب السابقة |
+| `Super + Ctrl + Left/Right` | التنقل بين علامات التبويب |
+| `Super + Alt + Arrows` | نقل النافذة إلى مجموعة مجاورة |
 
-### Workspaces
+### مساحات العمل
 
-| Shortcut | Action |
-|----------|--------|
-| `Super + 1-0` | Switch to workspace 1-10 |
-| `Super + Shift + 1-0` | Move window to workspace |
-| `Super + Shift + Alt + 1-0` | Move window silently to workspace |
-| `Super + TAB` | Next workspace |
-| `Super + Shift + TAB` | Previous workspace |
-| `Super + Ctrl + TAB` | Former workspace |
-| `Super + Scroll` | Switch workspaces |
-| `Super + Shift + Alt + Arrows` | Move workspace to another monitor |
-| `Super + S` | Toggle scratchpad |
-| `Super + Alt + S` | Move window to scratchpad |
+| الاختصار | الوظيفة |
+|----------|---------|
+| `Super + 1-0` | التنقل إلى مساحة العمل 1-10 |
+| `Super + Shift + 1-0` | نقل النافذة إلى مساحة عمل |
+| `Super + Shift + Alt + 1-0` | نقل النافذة بصمت إلى مساحة عمل |
+| `Super + Tab` | مساحة العمل التالية |
+| `Super + Shift + Tab` | مساحة العمل السابقة |
+| `Super + Ctrl + Tab` | مساحة العمل الأخيرة |
+| `Super + Scroll` | التنقل بين مساحات العمل بعجلة الماوس |
+| `Super + Shift + Alt + Arrows` | نقل مساحة عمل إلى شاشة أخرى |
+| `Super + S` | إظهار/إخفاء الـ Scratchpad |
+| `Super + Alt + S` | نقل النافذة إلى الـ Scratchpad |
 
-### System
+### النظام
 
-| Shortcut | Action |
-|----------|--------|
-| `Super + Shift + X` | Lock screen |
-| `Super + Shift + B` | Restart Waybar |
-| `Super + Shift + M` | Exit Hyprland |
+| الاختصار | الوظيفة |
+|----------|---------|
+| `Super + Shift + X` | قفل الشاشة |
+| `Super + Shift + B` | إعادة تشغيل Waybar |
+| `Super + Shift + M` | الخروج من Hyprland |
 
 ---
 
-## 📁 File Structure
+## 📁 هيكل الملفات
 
 ```
 ~/.config/
 ├── hypr/
-│   ├── hyprland.conf
-│   ├── hyprlock.conf
-│   ├── hypridle.conf
-│   ├── autostart.conf
-│   ├── bindings.conf
-│   ├── colors.conf
-│   ├── env.conf
-│   ├── input.conf
-│   ├── looknfeel.conf
-│   ├── monitors.conf
-│   ├── windowrules.conf
-│   ├── xdph.conf
-│   └── scripts/
+│   ├── hyprland.conf          ← الملف الرئيسي (يستدعي بقية الملفات)
+│   ├── hyprlock.conf          ← إعدادات شاشة القفل
+│   ├── hypridle.conf          ← إعدادات مؤقت الخمول
+│   ├── autostart.conf         ← التطبيقات التي تعمل عند البدء
+│   ├── bindings.conf          ← جميع اختصارات لوحة المفاتيح
+│   ├── colors.conf            ← الألوان (تُدار بواسطة theme-set.sh)
+│   ├── env.conf               ← متغيرات البيئة
+│   ├── input.conf             ← إعدادات لوحة المفاتيح والفأرة
+│   ├── looknfeel.conf         ← الشكل والمظهر (فجوات، ضبابية، حركات)
+│   ├── monitors.conf          ← إعدادات الشاشات
+│   ├── windowrules.conf       ← قواعد النوافذ
+│   ├── xdph.conf              ← إعدادات مشاركة الشاشة
+│   ├── hyprlock/assets/       ← صور شاشة القفل
+│   └── scripts/               ← جميع السكريبتات
+│       ├── audio-switch.sh
+│       ├── battery-monitor.sh
+│       ├── battery-status.sh
+│       ├── debug.sh
+│       ├── font-set.sh
+│       ├── idle-toggle.sh
+│       ├── migrate.sh
+│       ├── monitor-scaling-cycle.sh
+│       ├── nightlight-toggle.sh
+│       ├── powerprofiles-set.sh
+│       ├── restore_wallpaper.sh
+│       ├── screenrecord.sh
+│       ├── screenshot.sh
+│       ├── theme-set.sh
+│       ├── theme-select.sh
+│       └── video-wallpaper.sh
+│
+├── themes/
+│   ├── dark/
+│   │   ├── void_purple/colors.toml
+│   │   └── deep_cyan/colors.toml
+│   ├── light/
+│   │   ├── sakura_pink/colors.toml
+│   │   ├── lavender/colors.toml
+│   │   ├── sky_blue/colors.toml
+│   │   └── inferno/colors.toml
+│   └── templates/             ← قوالب توليد ملفات الثيمات
 │
 ├── waybar/
 │   ├── config.jsonc
 │   ├── style.css
 │   ├── theme.css
-│   ├── themes/  (black_hole · cyan)
 │   └── scripts/
+│       ├── screen-recording.sh
+│       ├── idle-indicator.sh
+│       ├── notification-silencing.sh
+│       └── nightlight-indicator.sh
 │
 ├── rofi/
 │   ├── app-launcher.rasi
@@ -397,150 +601,117 @@ sddm qt6-svg qt6-virtualkeyboard qt6-multimedia-ffmpeg
 │   ├── wifi.rasi
 │   ├── wifi-bluetooth-menu.rasi
 │   ├── window-switcher.rasi
-│   ├── themes/  (black_hole · cyan)
 │   └── scripts/
+│       ├── launcher-menu.sh
+│       ├── network-menu.sh
+│       ├── nowplaying.sh
+│       ├── wallpaper-select.sh
+│       ├── theme-select.sh
+│       ├── sddm-theme.sh
+│       ├── window-switcher.sh
+│       ├── clipboard-images.sh
+│       ├── pkg-install
+│       ├── pkg-remove
+│       └── video-wallpaper-select.sh
 │
 ├── swaync/
 │   ├── config.json
 │   ├── style.css
 │   ├── theme.css
-│   ├── themes/  (black_hole · cyan)
 │   └── scripts/
 │
 ├── kitty/
 │   ├── kitty.conf
-│   ├── theme.conf
-│   └── themes/  (black_hole · cyan)
+│   └── theme.conf
 │
 ├── btop/
 │   ├── btop.conf
-│   └── themes/  (black_hole · cyan)
+│   └── themes/theme.theme
 │
-├── cava/
-│   ├── config
-│   └── themes/  (black_hole · cyan)
-│
-├── starship/
-│   ├── theme.toml
-│   └── themes/  (black_hole · cyan)
+├── cava/config
 │
 ├── fastfetch/
 │   ├── config.jsonc
-│   ├── onyx.txt
+│   ├── onyx.txt              ← ASCII art مخصص
 │   └── scripts/
+│       ├── theme-current.sh
+│       ├── version-branch.sh
+│       ├── version-channel.sh
+│       ├── version-pkgs.sh
+│       └── version.sh
 │
 ├── yazi/
 │   ├── yazi.toml
 │   ├── keymap.toml
-│   ├── theme.toml
-│   └── themes/  (black_hole · cyan)
+│   └── theme.toml
 │
+├── starship/theme.toml
 ├── ctpv/config
 ├── lsd/config.yaml
 ├── tmux/tmux.conf
-│
-├── icons-themes/
-│   ├── black_hole
-│   └── cyan
-│
-├── gtk-3.0/
-│   ├── gtk.css · settings.ini
-│   └── themes/  (black_hole · cyan)
-│
-└── gtk-4.0/
-    ├── gtk.css · settings.ini
-    └── themes/  (black_hole · cyan)
+├── fontconfig/fonts.conf
+├── gtk-3.0/ (gtk.css · settings.ini)
+└── gtk-4.0/ (gtk.css · settings.ini)
 
 ~/
-├── .zshrc
+├── .zshrc                    ← إعدادات Zsh مع تاريخ، aliases، وplugins
 ├── .gitconfig
-├── Videos/
-├── Pictures/
-│   ├── Screenshots/
-│   └── Wallpapers/themes/
-│       ├── black_hole.png
-│       └── cyan.jpg
-│
-└── dotfiles/
-    └── sddm-theme/
-        ├── Main.qml
-        ├── Components/
-        ├── Assets/
-        ├── Fonts/
-        ├── Themes/  (japanese_aesthetic)
-        └── Backgrounds/  (japanese_aesthetic)
+├── Videos/                   ← مجلد حفظ تسجيلات الشاشة
+└── Pictures/
+    ├── Screenshots/
+    └── Wallpapers/
+
+~/dotfiles/
+├── install.sh
+├── version                   ← الإصدار الحالي (1.1.0)
+├── install/
+│   ├── helpers/
+│   ├── preflight/
+│   ├── packaging/
+│   ├── config/
+│   └── post-install/
+├── migrations/               ← ترقية الإعدادات بين الإصدارات
+└── sddm/
+    ├── silent/               ← ثيم Silent
+    │   ├── Main.qml
+    │   ├── components/
+    │   ├── configs/sakura_pink.conf
+    │   ├── fonts/redhat*/
+    │   └── icons/
+    └── astronaut/            ← ثيم Astronaut
 ```
 
 ---
 
-## ⚠️ Manual Configuration After Install
+## ⚠️ الإعداد اليدوي بعد التثبيت
 
-| File | What to Edit |
-|------|-------------|
-| `~/.config/hypr/monitors.conf` | Monitor name, resolution, and refresh rate |
-| `~/.config/hypr/input.conf` | Keyboard layout and mouse settings |
-| `~/.config/hypr/hyprland.conf` | Default terminal, browser, or file manager |
-
----
-
-## 📝 Notes
-
-- Default theme: **Black Hole** — applied automatically on install
-- Screenshots are saved to `~/Pictures/Screenshots/`
-- A config backup is saved to `~/.config_backup_*` on every install
-- Wallpaper is restored automatically on every boot via `restore_wallpaper.sh`
-- Hyprland config is split into sub-files — edit each section in its own file
-- Night light toggled via `Super + Shift + N` or `Super + F7`
-- The `Electroharmonix` font (used in lock screen) is bundled in `sddm-theme/Fonts/`
-- Zsh plugins (autosuggestions, syntax-highlighting, history-substring-search) are bundled in `~/.config/zsh/`
+| الملف | ما يجب تعديله |
+|-------|--------------|
+| `~/.config/hypr/monitors.conf` | اسم الشاشة، الدقة، ومعدل التحديث |
+| `~/.config/hypr/input.conf` | تخطيط لوحة المفاتيح وإعدادات الفأرة |
+| `~/.config/hypr/hyprland.conf` | الطرفية الافتراضية، المتصفح، أو مدير الملفات |
 
 ---
 
-## 🤝 Contributing
+## 📝 ملاحظات
 
-Suggestions and fixes are welcome — open an Issue or PR.
+- الإصدار الحالي: **1.1.0**
+- الثيم الافتراضي: **void_purple** — يُطبَّق تلقائياً عند التثبيت
+- إعداد Hyprland مقسّم إلى ملفات فرعية — عدّل كل قسم في ملفه المخصص
+- نسخ احتياطي من الإعداد يُحفظ في `~/.config_backup_*` عند كل تثبيت
+- خلفية الشاشة تُستعاد تلقائياً عند كل إقلاع عبر `restore_wallpaper.sh`
+- المؤشر المستخدم: **Bibata-Modern-Classic** بحجم 16px (Hyprland) و 24px (HyprCursor)
+- إضافات Zsh (autosuggestions, syntax-highlighting, history-substring-search) مضمّنة في `~/.config/zsh/`
+- المتغيرات البيئية لـ Wayland مُعدَّة مسبقاً في `env.conf` لضمان التوافق مع GTK وQT وSDL وElectron
+- ملفات XWayland تعمل بمقياس `force_zero_scaling = true` لتجنب التشويه
+- التحديثات والمهاجرات التلقائية مُتتبَّعة في `~/.local/state/onyx/migrations/`
 
 ---
 
-## 🆕 New in This Version
+## 🤝 المساهمة
 
-### 🔋 Battery Monitor
-- Automatic low battery alert at 10% via systemd timer (every 30s)
-- Add `~/.config/onyx/hooks/battery-low` to play a sound or run custom actions
+الاقتراحات والإصلاحات مرحّب بها — افتح **Issue** أو **Pull Request**.
 
-### 🪝 Hooks System
-Add scripts to `~/.config/onyx/hooks/` for custom actions at key events:
+---
 
-| Hook file       | Triggered when              |
-|-----------------|-----------------------------|
-| `battery-low`   | Battery reaches 10%         |
-| `theme-set`     | A theme is applied          |
-| `font-set`      | The font is changed         |
-| `post-update`   | After system update         |
-
-Sample files (with `.sample` extension) are provided as starting points.
-
-### 📦 Migrations
-Config changes between versions are handled automatically via `migrations/`.
-State is tracked in `~/.local/state/onyx/migrations/`.
-
-### 🐛 Debug Tool
-```bash
-~/.config/hypr/scripts/debug.sh
-```
-Collects system info, logs, and installed packages. Can upload to 0x0.st for sharing.
-
-### ⚡ Power Profiles
-```bash
-~/.config/hypr/scripts/powerprofiles-set.sh toggle   # performance ↔ balanced
-~/.config/hypr/scripts/powerprofiles-set.sh ac        # set performance on AC
-~/.config/hypr/scripts/powerprofiles-set.sh battery   # set balanced on battery
-```
-
-### 📺 Waybar Indicators
-New live indicators in `~/.config/waybar/scripts/`:
-- `screen-recording.sh` — shows 󰻂 while recording
-- `idle-indicator.sh` — shows 󱫖 when auto-lock is off
-- `notification-silencing.sh` — shows 󰂛 in DND mode
-- `nightlight-indicator.sh` — shows  when night light is on
-
+*ONYX Dotfiles — v1.1.0*
