@@ -1,0 +1,202 @@
+#!/bin/bash
+# ══════════════════════════════════════════════════════════════════
+#   screenrecord.sh — ONYX Screen Recorder
+#   Improvements over base version:
+#     - Audio normalization to -14 LUFS after recording stops
+#     - Thumbnail preview in notification
+#     - --resolution= override flag
+#     - Better webcam autodetect
+# ══════════════════════════════════════════════════════════════════
+
+[[ -f ~/.config/user-dirs.dirs ]] && source ~/.config/user-dirs.dirs
+OUTPUT_DIR="${ONYX_SCREENRECORD_DIR:-${XDG_VIDEOS_DIR:-$HOME/Videos}}"
+
+if [[ ! -d "$OUTPUT_DIR" ]]; then
+  notify-send "Screen recording directory missing: $OUTPUT_DIR" -u critical -t 3000
+  exit 1
+fi
+
+DESKTOP_AUDIO="false"
+MICROPHONE_AUDIO="false"
+WEBCAM="false"
+WEBCAM_DEVICE=""
+RESOLUTION=""
+STOP_RECORDING="false"
+RECORDING_FILE="/tmp/onyx-screenrecord-filename"
+
+for arg in "$@"; do
+  case "$arg" in
+  --with-desktop-audio)    DESKTOP_AUDIO="true" ;;
+  --with-microphone-audio) MICROPHONE_AUDIO="true" ;;
+  --with-webcam)           WEBCAM="true" ;;
+  --webcam-device=*)       WEBCAM_DEVICE="${arg#*=}" ;;
+  --resolution=*)          RESOLUTION="${arg#*=}" ;;
+  --stop-recording)        STOP_RECORDING="true" ;;
+  esac
+done
+
+# ── Webcam overlay ────────────────────────────────────────────────
+start_webcam_overlay() {
+  cleanup_webcam
+  if [[ -z "$WEBCAM_DEVICE" ]]; then
+    WEBCAM_DEVICE=$(v4l2-ctl --list-devices 2>/dev/null | grep -m1 "^[[:space:]]*/dev/video" | tr -d '\t')
+    if [[ -z "$WEBCAM_DEVICE" ]]; then
+      notify-send "No webcam devices found" -u critical -t 3000
+      return 1
+    fi
+  fi
+
+  local scale
+  scale=$(hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .scale')
+  local target_width
+  target_width=$(awk "BEGIN {printf \"%.0f\", 360 * $scale}")
+  local preferred_resolutions=("640x360" "1280x720" "1920x1080")
+  local video_size_arg=""
+  local available_formats
+  available_formats=$(v4l2-ctl --list-formats-ext -d "$WEBCAM_DEVICE" 2>/dev/null)
+
+  for resolution in "${preferred_resolutions[@]}"; do
+    if echo "$available_formats" | grep -q "$resolution"; then
+      video_size_arg="-video_size $resolution"
+      break
+    fi
+  done
+
+  ffplay -f v4l2 $video_size_arg -framerate 30 "$WEBCAM_DEVICE" \
+    -vf "crop=iw/2:ih,scale=${target_width}:-1" \
+    -window_title "WebcamOverlay" \
+    -noborder \
+    -fflags nobuffer -flags low_delay \
+    -probesize 32 -analyzeduration 0 \
+    -loglevel quiet &
+  sleep 1
+}
+
+cleanup_webcam() {
+  pkill -f "WebcamOverlay" 2>/dev/null || true
+}
+
+# ── Resolution helper ─────────────────────────────────────────────
+default_resolution() {
+  local width height
+  read -r width height < <(hyprctl monitors -j | jq -r '.[] | select(.focused == true) | "\(.width) \(.height)"')
+  if ((width > 3840 || height > 2160)); then
+    echo "3840x2160"
+  else
+    echo "0x0"
+  fi
+}
+
+# ── Start recording ───────────────────────────────────────────────
+start_screenrecording() {
+  local filename="$OUTPUT_DIR/screenrecording-$(date +'%Y-%m-%d_%H-%M-%S').mp4"
+  local audio_devices=""
+  local audio_args=()
+
+  [[ "$DESKTOP_AUDIO" == "true" ]] && audio_devices+="default_output"
+
+  if [[ "$MICROPHONE_AUDIO" == "true" ]]; then
+    [[ -n "$audio_devices" ]] && audio_devices+="|"
+    audio_devices+="default_input"
+  fi
+
+  [[ -n "$audio_devices" ]] && audio_args+=(-a "$audio_devices" -ac aac)
+
+  local resolution="${RESOLUTION:-$(default_resolution)}"
+
+  gpu-screen-recorder -w portal -k auto -s "$resolution" -f 60 -fm cfr \
+    -fallback-cpu-encoding yes -o "$filename" "${audio_args[@]}" &
+  local pid=$!
+
+  while kill -0 $pid 2>/dev/null && [[ ! -f "$filename" ]]; do
+    sleep 0.2
+  done
+
+  if kill -0 $pid 2>/dev/null; then
+    echo "$filename" > "$RECORDING_FILE"
+    toggle_recording_indicator
+    notify-send "Screen recording started" "Press Super+Shift+R again to stop" -u low -t 3000
+  fi
+}
+
+# ── Stop recording ────────────────────────────────────────────────
+stop_screenrecording() {
+  pkill -SIGINT -f "^gpu-screen-recorder"
+
+  local count=0
+  while pgrep -f "^gpu-screen-recorder" >/dev/null && ((count < 50)); do
+    sleep 0.1
+    count=$((count + 1))
+  done
+
+  toggle_recording_indicator
+  cleanup_webcam
+
+  if pgrep -f "^gpu-screen-recorder" >/dev/null; then
+    pkill -9 -f "^gpu-screen-recorder"
+    notify-send "Screen recording error" "Force-killed. Video may be corrupted." -u critical -t 5000
+    rm -f "$RECORDING_FILE"
+    return
+  fi
+
+  finalize_recording
+
+  local filename
+  filename=$(cat "$RECORDING_FILE" 2>/dev/null)
+  local preview="${filename%.mp4}-preview.png"
+
+  # Generate thumbnail from first frame
+  ffmpeg -y -i "$filename" -ss 00:00:00.1 -vframes 1 -q:v 2 "$preview" -loglevel quiet 2>/dev/null
+
+  (
+    ACTION=$(notify-send "Screen recording saved" \
+      "Click to open in mpv" \
+      -t 10000 -i "${preview:-video-x-generic}" -A "default=open")
+    [[ "$ACTION" == "default" ]] && mpv "$filename"
+    rm -f "$preview"
+  ) &
+
+  rm -f "$RECORDING_FILE"
+}
+
+# ── Finalize: trim first frame + normalize audio ──────────────────
+finalize_recording() {
+  local latest
+  latest=$(cat "$RECORDING_FILE" 2>/dev/null)
+  [[ -f "$latest" ]] || return
+
+  local args=(-y -ss 0.1 -i "$latest")
+
+  # Normalize audio to -14 LUFS if audio track exists
+  if ffprobe -v error -select_streams a -show_entries stream=codec_type \
+       -of csv=p=0 "$latest" 2>/dev/null | grep -q audio; then
+    args+=(-af loudnorm=I=-14:TP=-1.5:LRA=11 -c:v copy)
+  else
+    args+=(-c copy)
+  fi
+
+  local processed="${latest%.mp4}-processed.mp4"
+  if ffmpeg "${args[@]}" "$processed" -loglevel quiet 2>/dev/null; then
+    mv "$processed" "$latest"
+  else
+    rm -f "$processed"
+  fi
+}
+
+toggle_recording_indicator() {
+  pkill -RTMIN+8 waybar 2>/dev/null || true
+}
+
+screenrecording_active() {
+  pgrep -f "^gpu-screen-recorder" >/dev/null
+}
+
+# ── Main ──────────────────────────────────────────────────────────
+if screenrecording_active; then
+  stop_screenrecording
+elif [[ "$STOP_RECORDING" == "true" ]]; then
+  exit 1
+else
+  [[ "$WEBCAM" == "true" ]] && start_webcam_overlay
+  start_screenrecording || cleanup_webcam
+fi

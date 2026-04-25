@@ -1,0 +1,6 @@
+#!/bin/bash
+# Hook: called after a successful system update.
+# To activate: remove .sample from filename.
+
+# Example: send a notification
+# notify-send "Update complete" "System is up to date." -u low

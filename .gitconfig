@@ -1,0 +1,40 @@
+# ─────────────────────────────────────────────────────────────────
+#   .gitconfig — Git Configuration
+# ─────────────────────────────────────────────────────────────────
+
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	lg = log --oneline --graph
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = true              # Rebase instead of merge on pull
+
+[push]
+	autoSetupRemote = true     # Auto set upstream on first push (no --set-upstream needed)
+
+[diff]
+	algorithm = histogram      # Clearer diffs on moved/edited lines
+	colorMoved = plain         # Highlight moved blocks in diffs
+	mnemonicPrefix = true      # More intuitive refs in diff output (i/w instead of a/b)
+
+[commit]
+	verbose = true             # Include diff in commit message editor
+
+[column]
+	ui = auto                  # Output in columns when possible (branch list etc.)
+
+[branch]
+	sort = -committerdate      # Sort branches by most recent commit first
+
+[tag]
+	sort = -version:refname    # Sort version tags numerically
+
+[rerere]
+	enabled = true             # Remember and reuse conflict resolutions
+	autoupdate = true          # Auto-apply stored resolutions

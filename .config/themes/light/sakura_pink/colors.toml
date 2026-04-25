@@ -1,0 +1,40 @@
+# Sakura Pink — cherry blossom light theme
+# mode: light
+
+background          = "#FFF0F5"
+foreground          = "#4A3050"
+accent              = "#E8A0BF"
+accent2             = "#C9A0DC"
+bg_alt              = "#FAE6EF"
+bg_alt2             = "#F4C2D8"
+border              = "#F4C2D8"
+fg_alt              = "#B07DB0"
+urgent              = "#D46A9F"
+selection_bg        = "#E8A0BF"
+selection_fg        = "#FFF0F5"
+
+color0              = "#FFF0F5"
+color1              = "#D46A9F"
+color2              = "#9B7DB0"
+color3              = "#C9A0DC"
+color4              = "#B07DB0"
+color5              = "#E8A0BF"
+color6              = "#C9A0DC"
+color7              = "#4A3050"
+color8              = "#F4C2D8"
+color9              = "#D46A9F"
+color10             = "#9B7DB0"
+color11             = "#E8A0BF"
+color12             = "#C9A0DC"
+color13             = "#B07DB0"
+color14             = "#C9A0DC"
+color15             = "#2A1030"
+
+hypr_active         = "rgba(E8A0BFff) rgba(C9A0DCff) 45deg"
+hypr_inactive       = "rgba(F4C2D8aa)"
+shadow_color        = "0x88E8A0BF"
+shadow_inactive     = "0x44F4C2D8"
+
+gtk_theme           = "adw-gtk3"
+gtk_color_scheme    = "prefer-light"
+

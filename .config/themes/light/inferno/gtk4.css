@@ -1,0 +1,42 @@
+/* Inferno — GTK Colors — fire orange + cream + deep red
+ * bg: #FDF0E0  fg: #2A0800  accent: #E07020  gold: #E0A020
+ */
+
+@define-color accent_color          #E07020;
+@define-color accent_bg_color       #E07020;
+@define-color accent_fg_color       #FDF0E0;
+
+@define-color window_bg_color       #FDF0E0;
+@define-color window_fg_color       #2A0800;
+
+@define-color view_bg_color         #FDF0E0;
+@define-color view_fg_color         #2A0800;
+
+@define-color headerbar_bg_color    #F5DFC0;
+@define-color headerbar_fg_color    #2A0800;
+@define-color headerbar_border_color #E8C8A0;
+@define-color headerbar_backdrop_color #FDF0E0;
+@define-color headerbar_shade_color rgba(224, 112, 32, 0.12);
+
+@define-color card_bg_color         #F5DFC0;
+@define-color card_fg_color         #2A0800;
+@define-color card_shade_color      rgba(224, 112, 32, 0.12);
+
+@define-color dialog_bg_color       #FDF0E0;
+@define-color dialog_fg_color       #2A0800;
+
+@define-color popover_bg_color      #F5DFC0;
+@define-color popover_fg_color      #2A0800;
+@define-color popover_shade_color   rgba(224, 112, 32, 0.12);
+
+@define-color sidebar_bg_color      #F8E8CC;
+@define-color sidebar_fg_color      #2A0800;
+@define-color sidebar_border_color  #E8C8A0;
+@define-color sidebar_backdrop_color #FDF0E0;
+
+@define-color thumbnail_bg_color    #F5DFC0;
+@define-color thumbnail_fg_color    #2A0800;
+
+@define-color success_color         #5A8A30;
+@define-color warning_color         #E0A020;
+@define-color error_color           #C04010;

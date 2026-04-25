@@ -1,0 +1,7 @@
+#!/bin/bash
+# Hook: called after a theme is applied.
+# Argument $1 = theme name (e.g. "void_purple").
+# To activate: remove .sample from filename.
+
+# Example: show the new theme name
+# notify-send -u low "Theme applied" "Now using: $1"

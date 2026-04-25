@@ -1,0 +1,93 @@
+/* Launcher Menu — dmenu — App-style layout */
+
+configuration {
+  modi:                     "drun";
+  show-icons:               true;
+  icon-theme:               "Oranchelo";
+  drun-display-format:      "{name}";
+  disable-history:          false;
+  hide-scrollbar:           true;
+  font:                     "JetBrainsMono Nerd Font Bold 10";
+}
+
+@theme "~/.config/rofi/themes/theme.rasi"
+
+window {
+  enabled:                  true;
+  location:                 center;
+  anchor:                   center;
+  width:                    300px;
+  border:                   2px solid;
+  border-radius:            0px;
+  border-color:             @border;
+  background-color:         @bg;
+}
+
+mainbox {
+  background-color:         transparent;
+  padding:                  10px;
+  spacing:                  8px;
+}
+
+inputbar {
+  background-color:         @bg-alt;
+  border-radius:            0px;
+  padding:                  10px 14px;
+  spacing:                  8px;
+  children:                 [ prompt, entry ];
+}
+
+prompt {
+  text-color:               @accent;
+  font:                     "JetBrainsMono Nerd Font Bold 10";
+  vertical-align:           0.5;
+}
+
+entry {
+  text-color:               @fg;
+  placeholder:              "Menu...";
+  placeholder-color:        @fg-alt;
+  vertical-align:           0.5;
+}
+
+listview {
+  background-color:         transparent;
+  scrollbar:                false;
+  spacing:                  2px;
+  lines:                    10;
+  padding:                  4px 0px;
+}
+
+element {
+  background-color:         transparent;
+  border-radius:            0px;
+  padding:                  9px 14px;
+  spacing:                  12px;
+  orientation:              horizontal;
+  cursor:                   pointer;
+}
+
+element selected {
+  background-color:         @accent;
+  text-color:               @bg;
+}
+
+element-icon {
+  size:                     20px;
+  vertical-align:           0.5;
+}
+
+element-text {
+  text-color:               inherit;
+  vertical-align:           0.5;
+  horizontal-align:         0;
+}
+
+element normal urgent {
+  text-color:               @urgent;
+}
+
+element selected urgent {
+  background-color:         @urgent;
+  text-color:               @bg;
+}

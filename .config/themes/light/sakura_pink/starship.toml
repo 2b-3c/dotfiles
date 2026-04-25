@@ -1,0 +1,158 @@
+# Sakura Pink — cherry blossom light
+# bg:#FFF0F5  fg:#4A3050  pink:#E8A0BF  lavender:#C9A0DC  cream:#FAE6EF
+
+scan_timeout = 100
+
+format = """
+$username\
+[](fg:no1 bg:re2)\
+$shell\
+[](fg:re2 bg:ye2)\
+$directory\
+[](fg:ye2)\
+$git_branch\
+$git_status\
+$c\
+$elixir\
+$elm\
+$golang\
+$gradle\
+$haskell\
+$java\
+$julia\
+$nim\
+$rust\
+$scala\
+$docker_context\
+\
+$line_break$character
+"""
+
+palette = "sakura_pink_theme"
+
+[username]
+show_always = true
+style_user = "bg:no1 fg:re0"
+format = '[ $user ]($style)'
+disabled = false
+
+[shell]
+style = "bg:re2 fg:re0"
+format = '[ $indicator ]($style)'
+disabled = false
+
+[directory]
+style = "fg:re0 bg:ye2"
+format = "[ $path ](bold $style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[line_break]
+disabled = false
+
+[jobs]
+disabled = true
+
+[character]
+success_symbol = "[❯ ](fg:re2)"
+error_symbol = "[](bold fg:gr2)"
+vicmd_symbol = "[󰆤](fg:ye2)"
+format = "$symbol"
+
+[time]
+disabled = true
+time_format = "%R"
+style = "fg:cy0 bg:cy2"
+format = '[](fg:cy2)[  ]($style)[](fg:cy2)'
+
+# ── Palette ───────────────────────────────────────────────────────
+# no = neutral/text   re = accent/pink   ye = directory/lavender
+# gr = error/muted    bl = lang modules  pu = git            
+# cy = time           or = secondary lang
+[palettes.sakura_pink_theme]
+no0 = "#4A3050"        # dark text (fg on light)
+no1 = "#E8A0BF"        # pink — username bg separator
+re0 = "#FFF0F5"        # cream white — text on colored bg
+re2 = "#E8A0BF"        # pink — shell segment bg
+gr0 = "#FFF0F5"        # light — unused bg
+gr2 = "#D46A9F"        # deep pink — error
+ye0 = "#FFF0F5"        # cream — text on lavender
+ye2 = "#C9A0DC"        # lavender — directory bg
+bl0 = "#FFF0F5"        # cream — text on lang bg
+bl2 = "#D4B8E8"        # soft violet — lang module bg
+pu0 = "#FFF0F5"        # cream — text on git bg
+pu2 = "#E8A0BF"        # pink — git branch bg
+cy0 = "#FFF0F5"        # cream — text on time bg
+cy2 = "#C9A0DC"        # lavender — time bg
+or0 = "#FFF0F5"        # cream — text on secondary lang
+or2 = "#F4B8D0"        # blush pink — secondary lang bg
+
+# ── Git ───────────────────────────────────────────────────────────
+[git_branch]
+symbol = ""
+style = "bg:pu2 fg:pu0"
+format = "[](fg:pu2)[ $symbol $branch ]($style)[](fg:pu2)"
+
+[git_status]
+style = "bg:pu0 fg:pu2"
+format = "[](fg:pu0)[ $all_status$ahead_behind ]($style)[](fg:pu0)"
+
+# ── Languages ─────────────────────────────────────────────────────
+[c]
+symbol = ""
+style = "bg:bl2 fg:bl0"
+format = "[](fg:pu2 bg:bl2)[ $symbol ($version) ]($style)"
+
+[elm]
+symbol = ""
+style = "bg:bl2 fg:bl0"
+format = "[ $symbol ($version) ]($style)"
+
+[golang]
+symbol = ""
+style = "bg:bl2 fg:bl0"
+format = "[ $symbol ($version) ]($style)"
+
+[gradle]
+style = "bg:cy2 fg:cy0"
+format = "[](fg:bl2 bg:cy2)[ $symbol ($version) ]($style)"
+
+[julia]
+symbol = ""
+style = "bg:cy2 fg:cy0"
+format = "[ $symbol ($version) ]($style)"
+
+[java]
+symbol = ""
+style = "bg:or2 fg:or0"
+format = "[](fg:cy2 bg:or2)[ $symbol ($version) ]($style)"
+
+[rust]
+symbol = ""
+style = "bg:or2 fg:or0"
+format = "[ $symbol ($version) ]($style)"
+
+[nim]
+symbol = "󰆥"
+style = "bg:ye2 fg:ye0"
+format = "[ $symbol ($version) ]($style)"
+
+[haskell]
+symbol = ""
+style = "bg:pu2 fg:pu0"
+format = "[](fg:ye2 bg:pu2)[ $symbol ($version) ]($style)"
+
+[elixir]
+symbol = ""
+style = "bg:pu2 fg:pu0"
+format = "[ $symbol ($version) ]($style)"
+
+[scala]
+symbol = ""
+style = "bg:re2 fg:re0"
+format = "[](fg:pu2 bg:re2)[ $symbol ($version) ]($style)"
+
+[docker_context]
+symbol = ""
+style = "bg:bl2 fg:bl0"
+format = "[](fg:re2 bg:bl2)[ $symbol $context ]($style)"

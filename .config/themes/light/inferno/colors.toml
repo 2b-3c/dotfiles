@@ -1,0 +1,40 @@
+# Inferno — fire orange, deep red, and gold
+# mode: light
+
+background          = "#FDF0E0"
+foreground          = "#2A0800"
+accent              = "#E07020"
+accent2             = "#E0A020"
+bg_alt              = "#F5DFC0"
+bg_alt2             = "#E8C8A0"
+border              = "#E8C8A0"
+fg_alt              = "#C04010"
+urgent              = "#C04010"
+selection_bg        = "#E07020"
+selection_fg        = "#FDF0E0"
+
+color0              = "#FDF0E0"
+color1              = "#C04010"
+color2              = "#507830"
+color3              = "#E0A020"
+color4              = "#E07020"
+color5              = "#C04010"
+color6              = "#E0A020"
+color7              = "#2A0800"
+color8              = "#E8C8A0"
+color9              = "#C04010"
+color10             = "#507830"
+color11             = "#E0A020"
+color12             = "#E07020"
+color13             = "#E0A020"
+color14             = "#E0A020"
+color15             = "#100200"
+
+hypr_active         = "rgba(E07020ff) rgba(E0A020ff) 45deg"
+hypr_inactive       = "rgba(C04010aa)"
+shadow_color        = "0x88E07020"
+shadow_inactive     = "0x44E8C8A0"
+
+gtk_theme           = "adw-gtk3"
+gtk_color_scheme    = "prefer-light"
+

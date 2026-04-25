@@ -1,0 +1,5 @@
+source "$ONYX_INSTALL/preflight/welcome.sh"
+source "$ONYX_INSTALL/preflight/guard.sh"
+source "$ONYX_INSTALL/preflight/choices.sh"
+source "$ONYX_INSTALL/preflight/begin.sh"
+source "$ONYX_INSTALL/preflight/sudo-keepalive.sh"

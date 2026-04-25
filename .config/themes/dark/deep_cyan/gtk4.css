@@ -1,0 +1,44 @@
+/* Cyan — GTK Colors — wallpaper palette
+ * bg: #001428  fg: #caf0f8  accent: #2da5c3
+ */
+
+@define-color accent_color          #2da5c3;
+@define-color accent_bg_color       #2da5c3;
+@define-color accent_fg_color       #001428;
+
+@define-color window_bg_color       #001428;
+@define-color window_fg_color       #caf0f8;
+
+@define-color view_bg_color         #001428;
+@define-color view_fg_color         #caf0f8;
+
+@define-color headerbar_bg_color    #001e3c;
+@define-color headerbar_fg_color    #caf0f8;
+@define-color headerbar_border_color #0f5a78;
+@define-color headerbar_backdrop_color #001428;
+@define-color headerbar_shade_color rgba(0, 0, 0, 0.3);
+
+@define-color card_bg_color         #001e3c;
+@define-color card_fg_color         #caf0f8;
+@define-color card_shade_color      rgba(0, 0, 0, 0.3);
+
+@define-color dialog_bg_color       #001428;
+@define-color dialog_fg_color       #caf0f8;
+
+@define-color popover_bg_color      #001e3c;
+@define-color popover_fg_color      #caf0f8;
+@define-color popover_shade_color   rgba(0, 0, 0, 0.3);
+
+@define-color sidebar_bg_color      #001e3c;
+@define-color sidebar_fg_color      #caf0f8;
+@define-color sidebar_backdrop_color #001428;
+@define-color sidebar_shade_color   rgba(0, 0, 0, 0.3);
+
+@define-color thumbnail_bg_color    #001e3c;
+@define-color thumbnail_fg_color    #caf0f8;
+
+@define-color shade_color           rgba(0, 0, 0, 0.3);
+
+@define-color warning_color         #e1b44b;
+@define-color error_color           #f0c34b;
+@define-color success_color         #4bd2f0;

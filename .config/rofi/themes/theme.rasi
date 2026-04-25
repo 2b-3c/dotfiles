@@ -1,0 +1,22 @@
+/* Sky Blue Theme for Rofi — sky blue + navy + cloud white */
+
+* {
+    bg:          #EEF7FD;
+    bg-alt:      #D8EEF8;
+    fg:          #1A2E4A;
+    fg-alt:      #0F78B4;
+    accent:      #2D87C3;
+    accent2:     #4BB4E1;
+    border:      #C5E5F4;
+    urgent:      #D94040;
+
+    main-bg:     #EEF7FD;
+    main-fg:     #1A2E4A;
+    main-br:     #2D87C3;
+    input-bg:    #D8EEF8;
+    select-bg:   #2D87C3;
+    select-fg:   #F5FAFE;
+
+    background-color: transparent;
+    text-color:       @fg;
+}

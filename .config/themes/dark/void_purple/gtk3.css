@@ -1,0 +1,44 @@
+/* Void Purple — GTK Colors
+ * bg: #0a0814  fg: #e8e0f0  accent: #a855f7
+ */
+
+@define-color accent_color          #a855f7;
+@define-color accent_bg_color       #a855f7;
+@define-color accent_fg_color       #0a0814;
+
+@define-color window_bg_color       #0a0814;
+@define-color window_fg_color       #e8e0f0;
+
+@define-color view_bg_color         #0a0814;
+@define-color view_fg_color         #e8e0f0;
+
+@define-color headerbar_bg_color    #130d24;
+@define-color headerbar_fg_color    #e8e0f0;
+@define-color headerbar_border_color #2d1f4a;
+@define-color headerbar_backdrop_color #1e1535;
+@define-color headerbar_shade_color rgba(0, 0, 0, 0.3);
+
+@define-color card_bg_color         #130d24;
+@define-color card_fg_color         #e8e0f0;
+@define-color card_shade_color      rgba(0, 0, 0, 0.3);
+
+@define-color dialog_bg_color       #0a0814;
+@define-color dialog_fg_color       #e8e0f0;
+
+@define-color popover_bg_color      #130d24;
+@define-color popover_fg_color      #e8e0f0;
+@define-color popover_shade_color   rgba(0, 0, 0, 0.3);
+
+@define-color sidebar_bg_color      #130d24;
+@define-color sidebar_fg_color      #e8e0f0;
+@define-color sidebar_backdrop_color #1e1535;
+@define-color sidebar_shade_color   rgba(0, 0, 0, 0.3);
+
+@define-color thumbnail_bg_color    #130d24;
+@define-color thumbnail_fg_color    #e8e0f0;
+
+@define-color shade_color           rgba(0, 0, 0, 0.3);
+
+@define-color warning_color         #e879f9;
+@define-color error_color           #e879f9;
+@define-color success_color         #c084fc;

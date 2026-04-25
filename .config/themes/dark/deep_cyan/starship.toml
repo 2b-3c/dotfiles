@@ -1,0 +1,151 @@
+# Cyan — bg:#050d1a  fg:#caf0f8  accent:#00b4d8
+
+scan_timeout = 100
+
+format = """
+$username\
+[](fg:no1 bg:re2)\
+$shell\
+[](fg:re2 bg:ye2)\
+$directory\
+[](fg:ye2)\
+$git_branch\
+$git_status\
+$c\
+$elixir\
+$elm\
+$golang\
+$gradle\
+$haskell\
+$java\
+$julia\
+$nim\
+$rust\
+$scala\
+$docker_context\
+\
+$line_break$character
+"""
+
+palette = "cyan_theme"
+
+[username]
+show_always = true
+style_user = "bg:no1 fg:re0"
+format = '[ $user ]($style)'
+disabled = false
+
+[shell]
+style = "bg:re2 fg:re0"
+format = '[ $indicator ]($style)'
+disabled = false
+
+[directory]
+style = "fg:re0 bg:ye2"
+format = "[ $path ](bold $style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[line_break]
+disabled = false
+
+[jobs]
+disabled = true
+
+[character]
+success_symbol = "[❯ ](fg:re2)"
+error_symbol = "[](bold fg:gr2)"
+vicmd_symbol = "[󰆤](fg:ye2)"
+format = "$symbol"
+
+[time]
+disabled = true
+time_format = "%R"
+style = "fg:cy0 bg:cy2"
+format = '[](fg:cy2)[  ]($style)[](fg:cy2)'
+
+[palettes.cyan_theme]
+no0 = "#caf0f8"
+no1 = "#90cfe0"
+re0 = "#0a1e35"
+re2 = "#00b4d8"
+gr0 = "#1a0f2a"
+gr2 = "#0096c7"
+ye0 = "#0d2845"
+ye2 = "#48cae4"
+bl0 = "#0a1e35"
+bl2 = "#48cae4"
+pu0 = "#0d2845"
+pu2 = "#00b4d8"
+cy0 = "#0a1e35"
+cy2 = "#48cae4"
+or0 = "#0d2845"
+or2 = "#00b4d8"
+
+[git_branch]
+symbol = ""
+style = "bg:pu2 fg:pu0"
+format = "[](fg:pu2)[ $symbol $branch ]($style)[](fg:pu2)"
+
+[git_status]
+style = "bg:pu0 fg:pu2"
+format = "[](fg:pu0)[ $all_status$ahead_behind ]($style)[](fg:pu0)"
+
+[c]
+symbol = ""
+style = "bg:bl2 fg:bl0"
+format = "[](fg:pu2 bg:bl2)[ $symbol ($version) ]($style)"
+
+[elm]
+symbol = ""
+style = "bg:bl2 fg:bl0"
+format = "[ $symbol ($version) ]($style)"
+
+[golang]
+symbol = ""
+style = "bg:bl2 fg:bl0"
+format = "[ $symbol ($version) ]($style)"
+
+[gradle]
+style = "bg:cy2 fg:cy0"
+format = "[](fg:bl2 bg:cy2)[ $symbol ($version) ]($style)"
+
+[julia]
+symbol = ""
+style = "bg:cy2 fg:cy0"
+format = "[ $symbol ($version) ]($style)"
+
+[java]
+symbol = ""
+style = "bg:or2 fg:or0"
+format = "[](fg:cy2 bg:or2)[ $symbol ($version) ]($style)"
+
+[rust]
+symbol = ""
+style = "bg:or2 fg:or0"
+format = "[ $symbol ($version) ]($style)"
+
+[nim]
+symbol = "󰆥"
+style = "bg:ye2 fg:ye0"
+format = "[ $symbol ($version) ]($style)"
+
+[haskell]
+symbol = ""
+style = "bg:pu2 fg:pu0"
+format = "[](fg:ye2 bg:pu2)[ $symbol ($version) ]($style)"
+
+[elixir]
+symbol = ""
+style = "bg:pu2 fg:pu0"
+format = "[ $symbol ($version) ]($style)"
+
+[scala]
+symbol = ""
+style = "bg:re2 fg:re0"
+format = "[](fg:pu2 bg:re2)[ $symbol ($version) ]($style)"
+
+[docker_context]
+symbol = ""
+style = "bg:bl2 fg:bl0"
+format = "[](fg:re2 bg:bl2)[ $symbol $context ]($style)"

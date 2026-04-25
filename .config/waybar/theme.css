@@ -1,0 +1,40 @@
+/* Sky Blue Theme for Waybar
+ * bg:#EEF7FD  fg:#1A2E4A  accent:#2D87C3  cyan:#4BB4E1
+ * Inspired by Sky Blue — sky blue + navy + cloud white
+ */
+
+@define-color main-fg         #1A2E4A;
+@define-color main-bg         #EEF7FD;
+@define-color main-br         #2D87C3;
+
+@define-color active-bg       #2D87C3;
+@define-color active-fg       #F5FAFE;
+
+@define-color hover-bg        #C5E5F4;
+@define-color hover-fg        #1A2E4A;
+
+@define-color white           #F5FAFE;
+@define-color black           #1A2E4A;
+
+@define-color module-fg       #0F78B4;
+@define-color workspaces      #D8EEF8;
+
+@define-color cpuinfo         #D8EEF8;
+@define-color memory          #C5E5F4;
+@define-color cpu             #C5E5F4;
+@define-color distro-fg       #F5FAFE;
+@define-color distro-bg       #2D87C3;
+@define-color time            #C5E5F4;
+@define-color date            #D8EEF8;
+@define-color tray            #D8EEF8;
+
+@define-color pulseaudio      #D8EEF8;
+@define-color backlight       #C5E5F4;
+@define-color battery         #C5E5F4;
+@define-color power           #4BB4E1;
+
+@define-color good            #2A9D6A;
+@define-color warning         #E07D2A;
+@define-color critical        #D94040;
+@define-color full            #4BB4E1;
+@define-color charging        #2A9D6A;

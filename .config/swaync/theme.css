@@ -1,0 +1,9 @@
+/* Sky Blue for SwayNC — sky blue + navy */
+@define-color main-bg    #EEF7FD;
+@define-color main-fg    #1A2E4A;
+@define-color accent     #2D87C3;
+@define-color accent-bg  #D8EEF8;
+@define-color hover      #C5E5F4;
+@define-color active     #2D87C3;
+@define-color border     #4BB4E1;
+@define-color inactive-fg #2D5070;

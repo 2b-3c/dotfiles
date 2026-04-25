@@ -1,0 +1,40 @@
+# Lavender — light purple, snow white, and violet eyes
+# mode: light
+
+background          = "#F0EAFA"
+foreground          = "#3D1F5C"
+accent              = "#9B59D6"
+accent2             = "#C084FC"
+bg_alt              = "#E4D8F8"
+bg_alt2             = "#D4C0F0"
+border              = "#C8B4E8"
+fg_alt              = "#7B3FC4"
+urgent              = "#C0392B"
+selection_bg        = "#9B59D6"
+selection_fg        = "#F0EAFA"
+
+color0              = "#F0EAFA"
+color1              = "#C0392B"
+color2              = "#7B3FC4"
+color3              = "#C084FC"
+color4              = "#9B59D6"
+color5              = "#7B3FC4"
+color6              = "#C084FC"
+color7              = "#3D1F5C"
+color8              = "#C8B4E8"
+color9              = "#C0392B"
+color10             = "#9B59D6"
+color11             = "#C084FC"
+color12             = "#9B59D6"
+color13             = "#C084FC"
+color14             = "#C084FC"
+color15             = "#1A0A30"
+
+hypr_active         = "rgba(9B59D6ff) rgba(C084FCff) 45deg"
+hypr_inactive       = "rgba(C8B4E8aa)"
+shadow_color        = "0x889B59D6"
+shadow_inactive     = "0x44C8B4E8"
+
+gtk_theme           = "adw-gtk3"
+gtk_color_scheme    = "prefer-light"
+

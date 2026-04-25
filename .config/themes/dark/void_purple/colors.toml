@@ -1,0 +1,44 @@
+# Void Purple — deep-space dark theme
+# mode: dark
+
+background          = "#0a0814"
+foreground          = "#e8e0f0"
+accent              = "#a855f7"
+accent2             = "#e879f9"
+bg_alt              = "#130d24"
+bg_alt2             = "#2a1a50"
+border              = "#2d1f4a"
+fg_alt              = "#b0a0cc"
+urgent              = "#e879f9"
+selection_bg        = "#a855f7"
+selection_fg        = "#0a0814"
+
+# Terminal colors
+color0              = "#0a0814"
+color1              = "#e879f9"
+color2              = "#9b5de5"
+color3              = "#e879f9"
+color4              = "#818cf8"
+color5              = "#a855f7"
+color6              = "#c084fc"
+color7              = "#e8e0f0"
+color8              = "#2d1f4a"
+color9              = "#e879f9"
+color10             = "#9b5de5"
+color11             = "#e879f9"
+color12             = "#818cf8"
+color13             = "#c084fc"
+color14             = "#c084fc"
+color15             = "#f5f0ff"
+
+# Hyprland borders
+hypr_active         = "rgba(a855f7ff) rgba(e879f9ff) 45deg"
+hypr_inactive       = "rgba(2d1f4aaa)"
+shadow_color        = "0x88a855f7"
+shadow_inactive     = "0x440a0814"
+
+# GTK
+gtk_theme           = "adw-gtk3-dark"
+gtk_color_scheme    = "prefer-dark"
+
+# Cava gradient

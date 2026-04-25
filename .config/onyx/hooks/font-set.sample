@@ -1,0 +1,7 @@
+#!/bin/bash
+# Hook: called after the font is changed.
+# Argument $1 = font name.
+# To activate: remove .sample from filename.
+
+# Example: notify with the new font
+# notify-send -u low "Font changed" "Now using: $1"

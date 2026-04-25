@@ -1,0 +1,40 @@
+# Sky Blue — sky blue, navy, and cloud white
+# mode: light
+
+background          = "#EEF7FD"
+foreground          = "#1A2E4A"
+accent              = "#2D87C3"
+accent2             = "#4BB4E1"
+bg_alt              = "#D8EEF8"
+bg_alt2             = "#C5E5F4"
+border              = "#C5E5F4"
+fg_alt              = "#0F78B4"
+urgent              = "#D94040"
+selection_bg        = "#2D87C3"
+selection_fg        = "#F5FAFE"
+
+color0              = "#EEF7FD"
+color1              = "#D94040"
+color2              = "#2A9D6A"
+color3              = "#E07D2A"
+color4              = "#2D87C3"
+color5              = "#0F78B4"
+color6              = "#4BB4E1"
+color7              = "#1A2E4A"
+color8              = "#C5E5F4"
+color9              = "#D94040"
+color10             = "#2A9D6A"
+color11             = "#E07D2A"
+color12             = "#4BB4E1"
+color13             = "#2D87C3"
+color14             = "#4BB4E1"
+color15             = "#0A1A2A"
+
+hypr_active         = "rgba(2D87C3ff) rgba(4BB4E1ff) 45deg"
+hypr_inactive       = "rgba(C5E5F4aa)"
+shadow_color        = "0x882D87C3"
+shadow_inactive     = "0x44C5E5F4"
+
+gtk_theme           = "adw-gtk3"
+gtk_color_scheme    = "prefer-light"
+

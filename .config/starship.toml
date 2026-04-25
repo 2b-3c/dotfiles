@@ -1,0 +1,158 @@
+# Sky Blue — Sky Blue — sky blue + navy + cloud white
+# bg:#EEF7FD  fg:#1A2E4A  accent:#2D87C3  cyan:#4BB4E1
+
+scan_timeout = 100
+
+format = """\
+$username\
+[](fg:no1 bg:re2)\
+$shell\
+[](fg:re2 bg:ye2)\
+$directory\
+[](fg:ye2)\
+$git_branch\
+$git_status\
+$c\
+$elixir\
+$elm\
+$golang\
+$gradle\
+$haskell\
+$java\
+$julia\
+$nim\
+$rust\
+$scala\
+$docker_context\
+\
+$line_break$character
+"""
+
+palette = "jjk_theme"
+
+[username]
+show_always = true
+style_user = "bg:no1 fg:re0"
+format = '[ $user ]($style)'
+disabled = false
+
+[shell]
+style = "bg:re2 fg:re0"
+format = '[ $indicator ]($style)'
+disabled = false
+
+[directory]
+style = "fg:re0 bg:ye2"
+format = "[ $path ](bold $style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[line_break]
+disabled = false
+
+[jobs]
+disabled = true
+
+[character]
+success_symbol = "[❯ ](fg:re2)"
+error_symbol = "[](bold fg:gr2)"
+vicmd_symbol = "[󰆤](fg:ye2)"
+format = "$symbol"
+
+[time]
+disabled = true
+time_format = "%R"
+style = "fg:cy0 bg:cy2"
+format = '[](fg:cy2)[  ]($style)[](fg:cy2)'
+
+# ── Palette ───────────────────────────────────────────────────────
+# no = neutral/text   re = blue accent   ye = cyan/directory
+# gr = error          bl = lang modules  pu = git
+# cy = time
+[palettes.jjk_theme]
+no0 = "#1A2E4A"        # dark navy — fg on light
+no1 = "#2D87C3"        # sky blue — username bg separator
+re0 = "#F5FAFE"        # cloud white — text on colored bg
+re2 = "#2D87C3"        # sky blue — shell segment bg
+gr0 = "#F5FAFE"        # light — unused bg
+gr2 = "#D94040"        # red — error
+ye0 = "#F5FAFE"        # cloud — text on cyan
+ye2 = "#4BB4E1"        # light cyan — directory bg
+bl0 = "#F5FAFE"        # cloud — text on lang bg
+bl2 = "#0F78B4"        # deep blue — lang module bg
+pu0 = "#F5FAFE"        # cloud — text on git bg
+pu2 = "#2D87C3"        # sky blue — git branch bg
+cy0 = "#F5FAFE"        # cloud — text on time bg
+cy2 = "#4BB4E1"        # cyan — time bg
+or0 = "#F5FAFE"        # cloud — text on secondary lang
+or2 = "#87D2F0"        # pale sky — secondary lang bg
+
+# ── Git ───────────────────────────────────────────────────────────
+[git_branch]
+symbol = ""
+style = "bg:pu2 fg:pu0"
+format = "[](fg:pu2)[ $symbol $branch ]($style)[](fg:pu2)"
+
+[git_status]
+style = "bg:pu0 fg:pu2"
+format = "[](fg:pu0)[ $all_status$ahead_behind ]($style)[](fg:pu0)"
+
+# ── Languages ─────────────────────────────────────────────────────
+[c]
+symbol = ""
+style = "bg:bl2 fg:bl0"
+format = "[](fg:pu2 bg:bl2)[ $symbol ($version) ]($style)"
+
+[elm]
+symbol = ""
+style = "bg:bl2 fg:bl0"
+format = "[ $symbol ($version) ]($style)"
+
+[golang]
+symbol = ""
+style = "bg:bl2 fg:bl0"
+format = "[ $symbol ($version) ]($style)"
+
+[gradle]
+style = "bg:cy2 fg:cy0"
+format = "[](fg:bl2 bg:cy2)[ $symbol ($version) ]($style)"
+
+[julia]
+symbol = ""
+style = "bg:cy2 fg:cy0"
+format = "[ $symbol ($version) ]($style)"
+
+[java]
+symbol = ""
+style = "bg:or2 fg:or0"
+format = "[](fg:cy2 bg:or2)[ $symbol ($version) ]($style)"
+
+[rust]
+symbol = ""
+style = "bg:or2 fg:or0"
+format = "[ $symbol ($version) ]($style)"
+
+[nim]
+symbol = "󰆥"
+style = "bg:ye2 fg:ye0"
+format = "[ $symbol ($version) ]($style)"
+
+[haskell]
+symbol = ""
+style = "bg:pu2 fg:pu0"
+format = "[](fg:ye2 bg:pu2)[ $symbol ($version) ]($style)"
+
+[elixir]
+symbol = ""
+style = "bg:pu2 fg:pu0"
+format = "[ $symbol ($version) ]($style)"
+
+[scala]
+symbol = ""
+style = "bg:re2 fg:re0"
+format = "[](fg:pu2 bg:re2)[ $symbol ($version) ]($style)"
+
+[docker_context]
+symbol = ""
+style = "bg:bl2 fg:bl0"
+format = "[](fg:re2 bg:bl2)[ $symbol $context ]($style)"

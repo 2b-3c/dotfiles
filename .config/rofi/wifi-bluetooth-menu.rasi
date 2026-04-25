@@ -1,0 +1,92 @@
+/* WiFi & Bluetooth Menu Theme */
+/* Based on kitty pink-lavender by playerofceleste */
+
+@theme "~/.config/rofi/themes/theme.rasi"
+
+configuration {
+  modi:        "drun";
+  show-icons:  false;
+  font:        "FiraCode Nerd Font Bold 10";
+}
+
+window {
+  enabled:          true;
+  location:         center;
+  anchor:           center;
+  y-offset:         0;
+  width:            240px;
+  border:           2px;
+  border-radius: 0px;
+  border-color:     @main-br;
+  background-color: @main-bg;
+  children:         [ "mainbox" ];
+}
+
+mainbox {
+  enabled:          true;
+  background-color: inherit;
+  text-color:       @main-fg;
+  children:         [ "wallbox", "listbox" ];
+}
+
+wallbox {
+  enabled:          false;
+  expand:           false;
+  margin:           6px;
+  border-radius: 0px;
+  background-color: @input-bg;
+  children:         [ "inputbar" ];
+}
+
+inputbar {
+  enabled:          true;
+  expand:           true;
+  background-color: inherit;
+  children:         [ "entry" ];
+}
+
+entry {
+  enabled:          true;
+  padding:          6px 10px;
+  cursor:           text;
+  background-color: inherit;
+  text-color:       @main-fg;
+}
+
+listbox {
+  enabled:          true;
+  background-color: inherit;
+  children:         [ "listview" ];
+}
+
+listview {
+  enabled:          true;
+  layout:           vertical;
+  cycle:            false;
+  columns:          1;
+  lines:            7;
+  padding:          6px;
+  spacing:          0;
+  background-color: inherit;
+}
+
+element {
+  enabled:          true;
+  padding:          6px;
+  cursor:           pointer;
+  background-color: transparent;
+  text-color:       @main-fg;
+}
+
+element selected.normal {
+  border-radius: 0px;
+  background-color: @select-bg;
+  text-color:       @select-fg;
+}
+
+element-text {
+  enabled:          true;
+  cursor:           inherit;
+  background-color: transparent;
+  text-color:       inherit;
+}

@@ -1,0 +1,42 @@
+/* Lavender — GTK Colors — light purple + snow + cyan
+ * bg: #F0EAFA  fg: #3D1F5C  accent: #9B59D6  cyan: #C084FC
+ */
+
+@define-color accent_color          #9B59D6;
+@define-color accent_bg_color       #9B59D6;
+@define-color accent_fg_color       #F0EAFA;
+
+@define-color window_bg_color       #F0EAFA;
+@define-color window_fg_color       #3D1F5C;
+
+@define-color view_bg_color         #F0EAFA;
+@define-color view_fg_color         #3D1F5C;
+
+@define-color headerbar_bg_color    #E4D8F8;
+@define-color headerbar_fg_color    #3D1F5C;
+@define-color headerbar_border_color #C8B4E8;
+@define-color headerbar_backdrop_color #F0EAFA;
+@define-color headerbar_shade_color rgba(100, 50, 180, 0.12);
+
+@define-color card_bg_color         #E4D8F8;
+@define-color card_fg_color         #3D1F5C;
+@define-color card_shade_color      rgba(100, 50, 180, 0.12);
+
+@define-color dialog_bg_color       #F0EAFA;
+@define-color dialog_fg_color       #3D1F5C;
+
+@define-color popover_bg_color      #E4D8F8;
+@define-color popover_fg_color      #3D1F5C;
+@define-color popover_shade_color   rgba(100, 50, 180, 0.12);
+
+@define-color sidebar_bg_color      #E8DEFA;
+@define-color sidebar_fg_color      #3D1F5C;
+@define-color sidebar_border_color  #C8B4E8;
+@define-color sidebar_backdrop_color #F0EAFA;
+
+@define-color thumbnail_bg_color    #E4D8F8;
+@define-color thumbnail_fg_color    #3D1F5C;
+
+@define-color success_color         #27AE60;
+@define-color warning_color         #9B59D6;
+@define-color error_color           #C0392B;
